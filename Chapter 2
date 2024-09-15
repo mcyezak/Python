@@ -1,0 +1,2926 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: x = 2
+
+In [2]: y=3
+
+In [3]: print('x=",x)
+  Cell In[3], line 1
+    print('x=",x)
+          ^
+SyntaxError: unterminated string literal (detected at line 1)
+
+
+In [4]: print('x=',x)
+x= 2
+
+In [5]: print('Value of', x, '+', x, 'is', (x+x))
+Value of 2 + 2 is 4
+
+In [6]: print('x=')
+x=
+
+In [7]: print((x+y), '=', (y+x))
+5 = 5
+
+In [8]: rating = input('Enter an interger rating between 1 and 10')
+Enter an interger rating between 1 and 105
+
+In [9]:  rating = input('Enter an integer rating between 1 and 10')
+Enter an integer rating between 1 and 10
+
+In [10]: rating = int(input('Enter an integer rating between 1 and 10: '))
+Enter an integer rating between 1 and 10: 4
+
+In [11]: grade = 91
+
+In [12]: grade
+Out[12]: 91
+
+In [13]: If grade >= 90:
+    ...: print (‘Congratulations! Your grade of 91 earns you an A in this course’
+    ...:
+  Cell In[13], line 2
+    print (‘Congratulations! Your grade of 91 earns you an A in this course’
+           ^
+SyntaxError: invalid character '‘' (U+2018)
+
+
+In [14]: If grade >= 90:
+    ...: print (‘Congratulations! Your grade of 91 earns you an A in this course’)
+    ...:
+  Cell In[14], line 2
+    print (‘Congratulations! Your grade of 91 earns you an A in this course’)
+           ^
+SyntaxError: invalid character '‘' (U+2018)
+
+
+In [15]: 'If grade >= 90:
+    ...: print ('Congratulations! Your grade of',grade,
+    ...:  'earns you an A in this course')
+    ...:
+    ...:
+  Cell In[15], line 1
+    'If grade >= 90:
+    ^
+SyntaxError: unterminated string literal (detected at line 1)
+
+
+In [16]: If grade >= 90:
+    ...:     ...: print ('Congratulations! Your grade of',grade,
+    ...:     ...:  'earns you an A in this course')
+  Cell In[16], line 1
+    If grade >= 90:
+       ^
+SyntaxError: invalid syntax
+
+
+In [17]: grade = 91
+
+In [18]: If grade >= 90:
+    ...:     ...: print ('Congratulations! Your grade of',grade,
+    ...:     ...:  'earns you an A in this course')
+  Cell In[18], line 1
+    If grade >= 90:
+       ^
+SyntaxError: invalid syntax
+
+
+In [19]: If 'grade' >= 90:
+    ...:     ...: print ('Congratulations! Your grade of',grade,
+    ...:     ...:  'earns you an A in this course')
+  Cell In[19], line 1
+    If 'grade' >= 90:
+       ^
+SyntaxError: invalid syntax
+
+
+In [20]: grade = 95  # or any other value assigned to grade
+    ...:
+    ...: if grade >= 90:
+    ...:     print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+    ...:
+Congratulations! Your grade of 95 earns you an A in this course
+
+In [21]: grade = 95
+    ...:
+    ...: if grade >= 90:
+    ...:     print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+    ...:
+Congratulations! Your grade of 95 earns you an A in this course
+
+In [22]: grade = 91
+    ...:     if grade >= 90:
+    ...:     print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+    ...:
+  Cell In[22], line 2
+    if grade >= 90:
+    ^
+IndentationError: unexpected indent
+
+
+In [23]: grade = 91
+    ...: if grade >= 90:
+    ...:     print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+    ...:
+    ...:
+Congratulations! Your grade of 91 earns you an A in this course
+
+In [24]: 27.5 + 2
+Out[24]: 29.5
+
+In [25]: 27.5 // 2
+Out[25]: 13.0
+
+In [26]: 27.5 // 2 = 13.0
+  Cell In[26], line 1
+    27.5 // 2 = 13.0
+    ^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+
+
+In [27]: 27.5 // 2 == 13.0
+Out[27]: True
+
+In [28]: radius = 2
+
+In [29]: radius =2
+
+In [30]: r = 2, diameter = 2*r
+  Cell In[30], line 1
+    r = 2, diameter = 2*r
+    ^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
+
+In [31]: radius = 2
+    ...: diameter = 2 * radius
+    ...: circumference = 2 * 3.14159 * radius
+    ...: area = 3.14159 * (radius ** 2)
+    ...:
+    ...: print(f"Diameter: {diameter}")
+    ...: print(f"Circumference: {circumference:.2f}")
+    ...: print(f"Area: {area:.2f}")
+    ...:
+Diameter: 4
+Circumference: 12.57
+Area: 12.57
+
+In [32]: Diameter: 4
+    ...: Circumference: 12.57
+    ...: Area: 12.57
+
+In [33]: radius = 2
+    ...:     ...: diameter = 2 * radius
+    ...:     ...: circumference = 2 * 3.14159 * radius
+    ...:     ...: area = 3.14159 * (radius ** 2)
+    ...:     ...:
+    ...:     ...: print(diameter)
+    ...:     ...: print(f"Circumference: {circumference:.2f}")
+    ...:     ...: print(f"Area: {area:.2f}")
+4
+Circumference: 12.57
+Area: 12.57
+
+In [34]: radius = 2
+    ...:     ...: diameter = 2 * radius
+    ...:     ...: circumference = 2 * 3.14159 * radius
+    ...:     ...: area = 3.14159 * (radius ** 2)
+    ...:     ...:
+    ...:     ...: print(f"Diameter: {diameter}")
+    ...:     ...: print(f"Circumference: {ci
+    ...: rcumference:.2f}")
+    ...:     ...: print(f"Area: {area:.2f}")
+  Cell In[34], line 7
+    print(f"Circumference: {ci
+                            ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+
+In [35]: radius = 2
+    ...: diameter = 2 * radius
+    ...: circumference = 2 * 3.14159 * radius
+    ...: area = 3.14159 * (radius ** 2)
+    ...:
+    ...: print(‘Diameter’, diameter)
+    ...: print(‘circumference’ , circumference)
+    ...: print(‘area’ , area )
+    ...:
+  Cell In[35], line 6
+    print(‘Diameter’, diameter)
+          ^
+SyntaxError: invalid character '‘' (U+2018)
+
+
+In [36]: radius = 2
+    ...: diameter = 2 * radius
+    ...: circumference = 2 * 3.14159 * radius
+    ...: area = 3.14159 * (radius ** 2)
+    ...:
+    ...: print('Diameter', diameter)
+    ...: print('circumference' , circumference)
+    ...: print('area' , area )
+    ...:
+    ...:
+Diameter 4
+circumference 12.56636
+area 12.56636
+
+In [37]: Number = int(input(‘Enter an integer: ‘))
+    ...: if number % 2 == 0:
+    ...: print(‘even’)
+    ...: if number % 2 !=0
+    ...: print (‘odd’)
+    ...:
+  Cell In[37], line 1
+    Number = int(input(‘Enter an integer: ‘))
+                       ^
+SyntaxError: invalid character '‘' (U+2018)
+
+
+In [38]: Number = int(input('Enter an integer: '))
+    ...: if number % 2 == 0:
+    ...: print('even')
+    ...: if number % 2 !=0
+    ...: print ('odd')
+    ...:
+    ...:
+  Cell In[38], line 3
+    print('even')
+    ^
+IndentationError: expected an indented block after 'if' statement on line 2
+
+
+In [39]:  Number = int(input('Enter an integer: '))
+    ...:     ...: if number % 2 == 0:
+    ...:     ...: print('even')
+    ...:     ...: if number % 2 !=0
+    ...:     ...: print ('odd')
+  Cell In[39], line 3
+    print('even')
+    ^
+IndentationError: expected an indented block after 'if' statement on line 2
+
+
+In [40]: number = int(input('Enter an integer: '))
+    ...:
+    ...: if number % 2 == 0:
+    ...:     print('even')
+    ...: else:
+    ...:     print('odd')
+    ...:
+Enter an integer: 4
+even
+
+In [41]: number = int(input('Enter an integer: '))
+    ...:
+    ...: if number % 2 == 0:
+    ...:     print('even')
+    ...: if number % 2 !=0:
+    ...:     print('odd')
+    ...:
+Enter an integer: 5
+odd
+
+In [42]: radius = 2
+    ...: diameter = 2 * radius
+    ...: circumference = 2 * 3.14159 * radius
+    ...: area = 3.14159 * (radius ** 2)
+    ...: print(‘Diameter:’, diameter)
+    ...: print(‘Circumference:’ , circumference)
+    ...: print(‘Area:’ , area )
+    ...:
+  Cell In[42], line 5
+    print(‘Diameter:’, diameter)
+          ^
+SyntaxError: invalid character '‘' (U+2018)
+
+
+In [43]: number = int(input('Enter an integer: '))
+    ...:     ...:
+    ...:     ...: if number % 2 == 0:
+    ...:     ...:     print('even')
+    ...:     ...: if number % 2 !=0:
+    ...:     ...:     print('odd')
+    ...:
+Enter an integer: 2
+even
+
+In [44]: number1 = 1024
+    ...: number2 = 2
+    ...:
+    ...: if number1 % 4 == 0:
+    ...:     print(number1 'is a multiple of 4.')
+    ...: if number1 % 4 != 0:
+    ...:     print(number1 'is not a multiple of 4.')
+    ...:
+    ...:
+    ...: if number2 % 10 == 0:
+    ...:     print(number2 'is a multiple of 10.')
+    ...: if number2 % 10 != 0::
+    ...:     print(number2 'is not a multiple of 10.')
+  Cell In[44], line 5
+    print(number1 'is a multiple of 4.')
+                  ^
+SyntaxError: invalid syntax
+
+
+In [45]: number1 = 1024
+    ...: number2 = 2
+    ...:
+    ...: if number1 % 4 == 0:
+    ...:     print(number1, 'is a multiple of 4.')
+    ...: if number1 % 4 != 0:
+    ...:     print(number1, 'is not a multiple of 4.')
+    ...:
+    ...:
+    ...: if number2 % 10 == 0:
+    ...:     print(number2, 'is a multiple of 10.')
+    ...: if number2 % 10 != 0::
+    ...:     print(number2, 'is not a multiple of 10.')
+  Cell In[45], line 12
+    if number2 % 10 != 0::
+                         ^
+SyntaxError: invalid syntax
+
+
+In [46]: number1 = 1024
+    ...: number2 = 2
+    ...:
+    ...: if number1 % 4 == 0:
+    ...:     print(number1, 'is a multiple of 4.')
+    ...: if number1 % 4 != 0:
+    ...:     print(number1, 'is not a multiple of 4.')
+    ...:
+    ...:
+    ...: if number2 % 10 == 0:
+    ...:     print(number2, 'is a multiple of 10.')
+    ...: if number2 % 10 != 0:
+    ...:     print(number2, 'is not a multiple of 10.')
+    ...:
+1024 is a multiple of 4.
+2 is not a multiple of 10.
+
+In [47]: ord('A')
+Out[47]: 65
+
+In [48]: ord('B')
+Out[48]: 66
+
+In [49]: ord('A,B,C')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[49], line 1
+----> 1 ord('A,B,C')
+
+TypeError: ord() expected a character, but string of length 5 found
+
+In [50]: ord('A','B','C')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[50], line 1
+----> 1 ord('A','B','C')
+
+TypeError: ord() takes exactly one argument (3 given)
+
+In [51]: ord('B')
+Out[51]: 66
+
+In [52]: ord('C')
+Out[52]: 67
+
+In [53]: ord('D')
+Out[53]: 68
+
+In [54]: ord('b')
+Out[54]: 98
+
+In [55]: ord('c')
+Out[55]: 99
+
+In [56]: ord('d')
+Out[56]: 100
+
+In [57]: ord('0')
+Out[57]: 48
+
+In [58]: ord('1')
+Out[58]: 49
+
+In [59]: ord('$')
+Out[59]: 36
+
+In [60]: ord('*')
+Out[60]: 42
+
+In [61]: ord('+')
+Out[61]: 43
+
+In [62]: ord(' ')
+Out[62]: 32
+
+In [63]: x = 5, y = 9, z = 10
+  Cell In[63], line 1
+    x = 5, y = 9, z = 10
+    ^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
+
+In [64]: 'x' =5
+  Cell In[64], line 1
+    'x' =5
+    ^
+SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?
+
+
+In [65]: number1= int(input(5))
+5
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[65], line 1
+----> 1 number1= int(input(5))
+
+ValueError: invalid literal for int() with base 10: ''
+
+In [66]:  number1= int(input(5))
+5
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[66], line 1
+----> 1 number1= int(input(5))
+
+ValueError: invalid literal for int() with base 10: ''
+
+In [67]: x=7
+
+In [68]: x
+Out[68]: 7
+
+In [69]: x
+Out[69]: 7
+
+In [70]: y=5
+
+In [71]: y
+Out[71]: 5
+
+In [72]: x+y
+Out[72]: 12
+
+In [73]: x=7
+
+In [74]: y=5
+
+In [75]: z=10
+
+In [76]: num1 = int(input('Enter the first integer: '))
+    ...: num2 = int(input('Enter the second integer: '))
+    ...: num3 = int(input('Enter the third integer: '))
+    ...:
+    ...:
+    ...: numbers = [num1, num2, num3]
+    ...: total_sum = sum(numbers)
+    ...: average = total_sum / len(numbers)
+    ...: product = num1 * num2 * num3
+    ...: smallest = min(numbers)
+    ...: largest = max(numbers)
+    ...:
+    ...:
+    ...: print('Sum:' total_sum)
+    ...: print('Average:' average)
+    ...: print('Product:' product)
+    ...: print('Smallest:' smallest)
+    ...: print('Largest:' largest)
+    ...:
+  Cell In[76], line 14
+    print('Sum:' total_sum)
+          ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+
+In [77]: num1 = int(input('Enter the first integer: '))
+    ...: num2 = int(input('Enter the second integer: '))
+    ...: num3 = int(input('Enter the third integer: '))
+    ...:
+    ...:
+    ...: numbers = [num1, num2, num3]
+    ...: total_sum = sum(numbers)
+    ...: average = total_sum / len(numbers)
+    ...: product = num1 * num2 * num3
+    ...: smallest = min(numbers)
+    ...: largest = max(numbers)
+    ...:
+    ...:
+    ...: print('Sum:', total_sum)
+    ...: print('Average:', average)
+    ...: print('Product:', product)
+    ...: print('Smallest:', smallest)
+    ...: print('Largest:', largest)
+Enter the first integer: 3
+Enter the second integer: 3
+Enter the third integer: 3
+Sum: 9
+Average: 3.0
+Product: 27
+Smallest: 3
+Largest: 3
+
+In [78]: num1 = int(input('Enter the first integer: '))
+    ...: num2 = int(input('Enter the second integer: '))
+    ...: num3 = int(input('Enter the third integer: '))
+    ...:
+    ...:
+    ...: numbers = [num1, num2, num3]
+    ...: total_sum = sum(numbers)
+    ...: average = total_sum / len(numbers)
+    ...: product = num1 * num2 * num3
+    ...: smallest = min(numbers)
+    ...: largest = max(numbers)
+    ...:
+    ...:
+    ...: print('Sum:', total_sum)
+    ...: print('Average:', average)
+    ...: print('Product:', product)
+    ...: print('Smallest:', smallest)
+    ...: print('Largest:', largest)
+Enter the first integer: 67
+Enter the second integer: 23
+Enter the third integer: 1
+Sum: 91
+Average: 30.333333333333332
+Product: 1541
+Smallest: 1
+Largest: 67
+
+In [79]: number = input('Enter a five-digit integer: ')
+    ...:
+    ...:     print('   '.join(number))
+  Cell In[79], line 3
+    print('   '.join(number))
+    ^
+IndentationError: unexpected indent
+
+
+In [80]: number = input('Enter a five-digit integer: ')
+    ...: print('   '.join(number))
+Enter a five-digit integer: 12345
+1   2   3   4   5
+
+In [81]: number = input('Enter a five-digit integer: ')
+    ...: print('   '.join(number))
+Enter a five-digit integer: 19
+1   9
+
+In [82]: number = input('Enter a five-digit integer: ')
+    ...: digit1 = number // 10000
+    ...: digit2 = (number % 10000) // 1000
+    ...: digit3 = (number % 1000) // 100
+    ...: digit4 = (number % 100) // 10
+    ...: digit5 = number % 10
+    ...:
+    ...: print(digit1,'   ',digit2,'   'digit3,'   ',digit4,'   'digit5)
+  Cell In[82], line 8
+    print(digit1,'   ',digit2,'   'digit3,'   ',digit4,'   'digit5)
+                              ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+
+In [83]: number = input('Enter a five-digit integer: ')
+    ...: digit1 = number // 10000
+    ...: digit2 = (number % 10000) // 1000
+    ...: digit3 = (number % 1000) // 100
+    ...: digit4 = (number % 100) // 10
+    ...: digit5 = number % 10
+    ...:
+    ...: print(digit1,'   ',digit2,'   'digit3,'   ',digit4,'   ',digit5)
+  Cell In[83], line 8
+    print(digit1,'   ',digit2,'   'digit3,'   ',digit4,'   ',digit5)
+                              ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+
+In [84]: number = input('Enter a five-digit integer: ')
+    ...: digit1 = number // 10000
+    ...: digit2 = (number % 10000) // 1000
+    ...: digit3 = (number % 1000) // 100
+    ...: digit4 = (number % 100) // 10
+    ...: digit5 = number % 10
+    ...:
+    ...: print(digit1,'   ',digit2,'   ,'digit3,'   ',digit4,'   ',digit5)
+  Cell In[84], line 8
+    print(digit1,'   ',digit2,'   ,'digit3,'   ',digit4,'   ',digit5)
+                              ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+
+In [85]: number = input('Enter a five-digit integer: ')
+    ...: digit1 = number // 10000
+    ...: digit2 = (number % 10000) // 1000
+    ...: digit3 = (number % 1000) // 100
+    ...: digit4 = (number % 100) // 10
+    ...: digit5 = number % 10
+    ...:
+    ...: print(digit1,'   ',digit2,'   ',digit3,'   ',digit4,'   ',digit5)
+Enter a five-digit integer: 17865
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[85], line 2
+      1 number = input('Enter a five-digit integer: ')
+----> 2 digit1 = number // 10000
+      3 digit2 = (number % 10000) // 1000
+      4 digit3 = (number % 1000) // 100
+
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+
+In [86]: number = int(input('Enter a five-digit integer: '))
+    ...: digit1 = number // 10000
+    ...: digit2 = (number % 10000) // 1000
+    ...: digit3 = (number % 1000) // 100
+    ...: digit4 = (number % 100) // 10
+    ...: digit5 = number % 10
+    ...:
+    ...: print(digit1,'   ',digit2,'   ',digit3,'   ',digit4,'   ',digit5)
+Enter a five-digit integer: 12345
+1     2     3     4     5
+
+In [87]: p = 1000
+    ...: r = .07
+    ...: a = 10
+    ...:
+    ...: a=p(1+r)**n
+    ...: print('After ten years', a)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[87], line 5
+      2 r = .07
+      3 a = 10
+----> 5 a=p(1+r)**n
+      6 print('After ten years', a)
+
+TypeError: 'int' object is not callable
+
+In [88]: p = 1000
+    ...: r = .07
+    ...: a = 10
+    ...:
+    ...: a = p * (1 + r) ** n
+    ...: print('After ten years', a)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[88], line 5
+      2 r = .07
+      3 a = 10
+----> 5 a = p * (1 + r) ** n
+      6 print('After ten years', a)
+
+NameError: name 'n' is not defined
+
+In [89]: p = 1000
+    ...: r = .07
+    ...: a = 10
+    ...: n= 10
+    ...:
+    ...: a = p * (1 + r) ** n
+    ...: print('After ten years', a)
+After ten years 1967.1513572895665
+
+In [90]: p = 1000
+    ...: r = .07
+    ...: a = 10
+    ...: n= [10,20,30]
+    ...:
+    ...: a = p * (1 + r) ** n
+    ...: print('After ten years', a)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[90], line 6
+      3 a = 10
+      4 n= [10,20,30]
+----> 6 a = p * (1 + r) ** n
+      7 print('After ten years', a)
+
+TypeError: unsupported operand type(s) for ** or pow(): 'float' and 'list'
+
+In [91]: p = 1000
+    ...: r = .07
+    ...: n= 10
+    ...:
+    ...: a = p * (1 + r) ** n
+    ...: print('After ten years', a)
+After ten years 1967.1513572895665
+
+In [92]: p = 1000
+    ...: r = .07
+    ...: years_list = [10, 20, 30]
+    ...:
+    ...: for n in years_list:
+    ...:      a = p * (1 + r) ** n
+    ...:      print('After ten years:', '$',a)
+    ...:
+After ten years: $ 1967.1513572895665
+After ten years: $ 3869.6844624861833
+After ten years: $ 7612.255042662042
+
+In [93]: p = 1000
+    ...: r = .07
+    ...: years_list = [10, 20, 30]
+    ...:
+    ...: for n in years_list:
+    ...:      a = p * (1 + r) ** n
+    ...:      print('After ten years:', '$',.2a)
+  Cell In[93], line 7
+    print('After ten years:', '$',.2a)
+                                   ^
+SyntaxError: invalid decimal literal
+
+
+In [94]: p = 1000
+    ...: r = .07
+    ...: years_list = [10, 20, 30]
+    ...:
+    ...: for n in years_list:
+    ...:      a = p * (1 + r) ** n
+    ...:      print('After', n, 'years:', '$',a)
+    ...:
+After 10 years: $ 1967.1513572895665
+After 20 years: $ 3869.6844624861833
+After 30 years: $ 7612.255042662042
+
+In [95]: 3**4
+Out[95]: 81
+
+In [96]: 12345*12345
+Out[96]: 152399025
+
+In [97]: 123456789*123456789
+Out[97]: 15241578750190521
+
+In [98]: x=12345677890438347384393450*1233245934048372363248403095345
+
+In [99]: x
+Out[99]: 15225257061453979004946819839647495767392067525343490250
+
+In [100]: age = int(input('Enter your age: '))
+     ...:
+     ...: max = 220 - age
+     ...:
+     ...: target_low = 0.50 * max
+     ...: target_high = 0.85 * max
+     ...:
+     ...:
+     ...: print('Your maximum heart rate is', max)
+     ...: print('Your target heart rate range is', target_low, 'to', target_high')
+  Cell In[100], line 10
+    print('Your target heart rate range is', target_low, 'to', target_high')
+                                                                          ^
+SyntaxError: unterminated string literal (detected at line 10)
+
+
+In [101]: maximum heart rate = 220-age
+     ...: target heart rate = range(.5*max - .85*max)
+     ...:
+     ...: age = int(input('Enter your age: '))
+     ...:
+     ...: max = 220 - age
+     ...:
+     ...: target_low = 0.50 * max
+     ...: target_high = 0.85 * max
+     ...:
+     ...:
+     ...: print('Your maximum heart rate is', max)
+     ...: print('Your target heart rate range is', target_low, 'to', target_high)
+  Cell In[101], line 1
+    maximum heart rate = 220-age
+            ^
+SyntaxError: invalid syntax
+
+
+In [102]: age = int(input('Enter your age: '))
+     ...:
+     ...: max = 220 - age
+     ...:
+     ...: target_low = 0.50 * max
+     ...: target_high = 0.85 * max
+     ...:
+     ...:
+     ...: print('Your maximum heart rate is', max)
+     ...: print('Your target heart rate range is', target_low, 'to', target_high)
+     ...:
+Enter your age: 39
+Your maximum heart rate is 181
+Your target heart rate range is 90.5 to 153.85
+
+In [103]: numbers = range(6)
+     ...: print(f"{'Number':<10}{'Square':<10}{'Cube':<10}")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(f"{num:<10}{square:<10}{cube:<10}")
+     ...:
+Number    Square    Cube
+0         0         0
+1         1         1
+2         4         8
+3         9         27
+4         16        64
+5         25        125
+
+In [104]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print(f"{'Number':<10}{'Square':<10}{'Cube':<10}")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(f"{num:<10}{square:<10}{cube:<10}")
+     ...:
+Number    Square    Cube
+0         0         0
+1         1         1
+2         4         8
+3         9         27
+4         16        64
+5         25        125
+
+In [105]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print("Number   Square   Cube")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(f"{num:<10}{square:<10}{cube:<10}")
+     ...:
+Number   Square   Cube
+0         0         0
+1         1         1
+2         4         8
+3         9         27
+4         16        64
+5         25        125
+
+In [106]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print("Number   Square   Cube")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(num, square, cube)
+     ...:
+Number   Square   Cube
+0 0 0
+1 1 1
+2 4 8
+3 9 27
+4 16 64
+5 25 125
+
+In [107]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print("Number\tSquare\tCube")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(num\t, square\t, cube)
+  Cell In[107], line 6
+    print(num\t, square\t, cube)
+              ^
+SyntaxError: unexpected character after line continuation character
+
+
+In [108]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print("Number\tSquare\tCube")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(num, square, cube)
+     ...:
+Number  Square  Cube
+0 0 0
+1 1 1
+2 4 8
+3 9 27
+4 16 64
+5 25 125
+
+In [109]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print("Number\tSquare\tCube")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(num, '\t', square,'\t' cube)
+  Cell In[109], line 6
+    print(num, '\t', square,'\t' cube)
+                            ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+
+In [110]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print("Number\tSquare\tCube")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(num, '\t', square,'\t' cube)
+  Cell In[110], line 6
+    print(num, '\t', square,'\t' cube)
+                            ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+
+In [111]: numbers = {0, 1, 2, 3, 4, 5}
+     ...: print("Number\tSquare\tCube")
+     ...: for num in numbers:
+     ...:     square = num ** 2
+     ...:     cube = num ** 3
+     ...:     print(num, '\t', square,'\t', cube)
+     ...:
+Number  Square  Cube
+0        0       0
+1        1       1
+2        4       8
+3        9       27
+4        16      64
+5        25      125
+
+     ...: num1 = get_float("Enter the first number: ")
+     ...: num2 = get_float("Enter the second number: ")
+     ...: num3 = get_float("Enter the third number: ")
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: if num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest, middle, largest)
+Enter three different floating-point numbers:
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[112], line 3
+      1 print("Enter three different floating-point numbers:")
+----> 3 num1 = get_float("Enter the first number: ")
+      4 num2 = get_float("Enter the second number: ")
+      5 num3 = get_float("Enter the third number: ")
+
+NameError: name 'get_float' is not defined
+
+     ...: num2 = float("Enter the second number: ")
+     ...: num3 = float("Enter the third number: ")
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: if num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest, middle, largest)
+     ...:
+Enter three different floating-point numbers:
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[113], line 3
+      1 print("Enter three different floating-point numbers:")
+----> 3 num1 = float("Enter the first number: ")
+      4 num2 = float("Enter the second number: ")
+      5 num3 = float("Enter the third number: ")
+
+ValueError: could not convert string to float: 'Enter the first number: '
+
+     ...: num1 = float(input("Enter the first number: "))
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: if num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest, middle, largest)
+Enter three different floating-point numbers:
+Enter the first number: 3
+Enter the second number: 4
+Enter the third number: 5
+5.0 3.0 4.0
+
+     ...: num1 = float(input("Enter the first number: "))
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest, middle, largest)
+Enter three different floating-point numbers:
+Enter the first number: 4
+Enter the second number: 5
+Enter the third number: 6
+4.0 5.0 6.0
+
+     ...: num1 = float(input("Enter the first number: "))
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,' ', middle,' ', largest)
+Enter three different floating-point numbers:
+Enter the first number: 3
+Enter the second number: 4
+Enter the third number: 5
+3.0   4.0   5.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 3
+Enter the second number: 4
+Enter the third number: 5
+3.0 , 4.0 , 5.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 3
+Enter the second number: 3
+Enter the third number: 4
+3.0 , 3.0 , 4.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 9
+Enter the second number: 1
+Enter the third number: 7
+1.0 , 7.0 , 9.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 1
+Enter the second number: 9
+Enter the third number: 9
+1.0 , 9.0 , 9.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 6
+Enter the second number: 9
+Enter the third number: 6
+6.0 , 6.0 , 9.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 3.4
+Enter the second number: 6.5
+Enter the third number: 3.4
+3.4 , 3.4 , 6.5
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 1
+Enter the second number: 2
+Enter the third number: 3
+1.0 , 2.0 , 3.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 1
+Enter the second number: 3
+Enter the third number: 2
+1.0 , 2.0 , 3.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 2
+Enter the second number: 1
+Enter the third number: 3
+1.0 , 2.0 , 3.0
+
+In [126]: 2
+Out[126]: 2
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 2
+Enter the second number: 3
+Enter the third number: 1
+1.0 , 2.0 , 3.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 3
+Enter the second number: 1
+Enter the third number: 2
+1.0 , 2.0 , 3.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 3
+Enter the second number: 2
+Enter the third number: 1
+1.0 , 2.0 , 3.0
+
+In [130]:
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 2
+Enter the second number: 2
+Enter the third number: 2
+2.0 , 2.0 , 2.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 5
+Enter the second number: 5
+Enter the third number: 6
+5.0 , 5.0 , 6.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 1
+Enter the second number: 2
+Enter the third number: 1
+1.0 , 1.0 , 2.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 4
+Enter the second number: 5
+Enter the third number: 5
+4.0 , 5.0 , 5.0
+
+     ...: num2 = float(input("Enter the second number: "))
+     ...: num3 = float(input("Enter the third number: "))
+     ...:
+     ...: if num1 <= num2 and num1 <= num3:
+     ...:     smallest = num1
+     ...:     if num2 <= num3:
+     ...:         middle = num2
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num2
+     ...: elif num2 <= num1 and num2 <= num3:
+     ...:     smallest = num2
+     ...:     if num1 <= num3:
+     ...:         middle = num1
+     ...:         largest = num3
+     ...:     else:
+     ...:         middle = num3
+     ...:         largest = num1
+     ...: else:
+     ...:     smallest = num3
+     ...:     if num1 <= num2:
+     ...:         middle = num1
+     ...:         largest = num2
+     ...:     else:
+     ...:         middle = num2
+     ...:         largest = num1
+     ...:
+     ...: print(smallest,',', middle,',', largest)
+     ...:
+Enter three different floating-point numbers:
+Enter the first number: 6
+Enter the second number: 6
+Enter the third number: 9
+6.0 , 6.0 , 9.0
+
+In [135]: %save
+UsageError: Missing filename.
+
+In [136]: %save Chapter2mcDonald
+The following commands were written to file `Chapter2mcDonald.py`:
+x = 2
+y=3
+print('x=",x)
+print('x=',x)
+print('Value of', x, '+', x, 'is', (x+x))
+print('x=')
+print((x+y), '=', (y+x))
+rating = input('Enter an interger rating between 1 and 10')
+rating = input('Enter an integer rating between 1 and 10')
+rating = int(input('Enter an integer rating between 1 and 10: '))
+grade = 91
+grade
+If grade >= 90:
+print (‘Congratulations! Your grade of 91 earns you an A in this course’
+If grade >= 90:
+print (‘Congratulations! Your grade of 91 earns you an A in this course’)
+'If grade >= 90:
+print ('Congratulations! Your grade of',grade,
+ 'earns you an A in this course')
+If grade >= 90:
+print ('Congratulations! Your grade of',grade,
+ 'earns you an A in this course')
+grade = 91
+If grade >= 90:
+print ('Congratulations! Your grade of',grade,
+ 'earns you an A in this course')
+If 'grade' >= 90:
+print ('Congratulations! Your grade of',grade,
+ 'earns you an A in this course')
+grade = 95  # or any other value assigned to grade
+
+if grade >= 90:
+    print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+grade = 95
+
+if grade >= 90:
+    print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+grade = 91
+    if grade >= 90:
+    print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+grade = 91
+if grade >= 90:
+    print('Congratulations! Your grade of', grade, 'earns you an A in this course')
+
+27.5 + 2
+27.5 // 2
+27.5 // 2 = 13.0
+27.5 // 2 == 13.0
+radius = 2
+radius =2
+r = 2, diameter = 2*r
+radius = 2
+diameter = 2 * radius
+circumference = 2 * 3.14159 * radius
+area = 3.14159 * (radius ** 2)
+
+print(f"Diameter: {diameter}")
+print(f"Circumference: {circumference:.2f}")
+print(f"Area: {area:.2f}")
+Diameter: 4
+Circumference: 12.57
+Area: 12.57
+radius = 2
+diameter = 2 * radius
+circumference = 2 * 3.14159 * radius
+area = 3.14159 * (radius ** 2)
+
+print(diameter)
+print(f"Circumference: {circumference:.2f}")
+print(f"Area: {area:.2f}")
+radius = 2
+diameter = 2 * radius
+circumference = 2 * 3.14159 * radius
+area = 3.14159 * (radius ** 2)
+
+print(f"Diameter: {diameter}")
+print(f"Circumference: {ci
+rcumference:.2f}")
+print(f"Area: {area:.2f}")
+radius = 2
+diameter = 2 * radius
+circumference = 2 * 3.14159 * radius
+area = 3.14159 * (radius ** 2)
+
+print(‘Diameter’, diameter)
+print(‘circumference’ , circumference)
+print(‘area’ , area )
+radius = 2
+diameter = 2 * radius
+circumference = 2 * 3.14159 * radius
+area = 3.14159 * (radius ** 2)
+
+print('Diameter', diameter)
+print('circumference' , circumference)
+print('area' , area )
+Number = int(input(‘Enter an integer: ‘))
+if number % 2 == 0:
+print(‘even’)
+if number % 2 !=0
+print (‘odd’)
+Number = int(input('Enter an integer: '))
+if number % 2 == 0:
+print('even')
+if number % 2 !=0
+print ('odd')
+Number = int(input('Enter an integer: '))
+if number % 2 == 0:
+print('even')
+if number % 2 !=0
+print ('odd')
+number = int(input('Enter an integer: '))
+
+if number % 2 == 0:
+    print('even')
+else:
+    print('odd')
+number = int(input('Enter an integer: '))
+
+if number % 2 == 0:
+    print('even')
+if number % 2 !=0:
+    print('odd')
+radius = 2
+diameter = 2 * radius
+circumference = 2 * 3.14159 * radius
+area = 3.14159 * (radius ** 2)
+print(‘Diameter:’, diameter)
+print(‘Circumference:’ , circumference)
+print(‘Area:’ , area )
+number = int(input('Enter an integer: '))
+
+if number % 2 == 0:
+    print('even')
+if number % 2 !=0:
+    print('odd')
+number1 = 1024
+number2 = 2
+
+if number1 % 4 == 0:
+    print(number1 'is a multiple of 4.')
+if number1 % 4 != 0:
+    print(number1 'is not a multiple of 4.')
+
+
+if number2 % 10 == 0:
+    print(number2 'is a multiple of 10.')
+if number2 % 10 != 0::
+    print(number2 'is not a multiple of 10.')
+number1 = 1024
+number2 = 2
+
+if number1 % 4 == 0:
+    print(number1, 'is a multiple of 4.')
+if number1 % 4 != 0:
+    print(number1, 'is not a multiple of 4.')
+
+
+if number2 % 10 == 0:
+    print(number2, 'is a multiple of 10.')
+if number2 % 10 != 0::
+    print(number2, 'is not a multiple of 10.')
+number1 = 1024
+number2 = 2
+
+if number1 % 4 == 0:
+    print(number1, 'is a multiple of 4.')
+if number1 % 4 != 0:
+    print(number1, 'is not a multiple of 4.')
+
+
+if number2 % 10 == 0:
+    print(number2, 'is a multiple of 10.')
+if number2 % 10 != 0:
+    print(number2, 'is not a multiple of 10.')
+
+ord('A')
+ord('B')
+ord('A,B,C')
+ord('A','B','C')
+ord('B')
+ord('C')
+ord('D')
+ord('b')
+ord('c')
+ord('d')
+ord('0')
+ord('1')
+ord('$')
+ord('*')
+ord('+')
+ord(' ')
+x = 5, y = 9, z = 10
+'x' =5
+number1= int(input(5))
+number1= int(input(5))
+x=7
+x
+x
+y=5
+y
+x+y
+x=7
+y=5
+z=10
+num1 = int(input('Enter the first integer: '))
+num2 = int(input('Enter the second integer: '))
+num3 = int(input('Enter the third integer: '))
+
+
+numbers = [num1, num2, num3]
+total_sum = sum(numbers)
+average = total_sum / len(numbers)
+product = num1 * num2 * num3
+smallest = min(numbers)
+largest = max(numbers)
+
+
+print('Sum:' total_sum)
+print('Average:' average)
+print('Product:' product)
+print('Smallest:' smallest)
+print('Largest:' largest)
+num1 = int(input('Enter the first integer: '))
+num2 = int(input('Enter the second integer: '))
+num3 = int(input('Enter the third integer: '))
+
+
+numbers = [num1, num2, num3]
+total_sum = sum(numbers)
+average = total_sum / len(numbers)
+product = num1 * num2 * num3
+smallest = min(numbers)
+largest = max(numbers)
+
+
+print('Sum:', total_sum)
+print('Average:', average)
+print('Product:', product)
+print('Smallest:', smallest)
+print('Largest:', largest)
+num1 = int(input('Enter the first integer: '))
+num2 = int(input('Enter the second integer: '))
+num3 = int(input('Enter the third integer: '))
+
+
+numbers = [num1, num2, num3]
+total_sum = sum(numbers)
+average = total_sum / len(numbers)
+product = num1 * num2 * num3
+smallest = min(numbers)
+largest = max(numbers)
+
+
+print('Sum:', total_sum)
+print('Average:', average)
+print('Product:', product)
+print('Smallest:', smallest)
+print('Largest:', largest)
+number = input('Enter a five-digit integer: ')
+
+    print('   '.join(number))
+number = input('Enter a five-digit integer: ')
+print('   '.join(number))
+number = input('Enter a five-digit integer: ')
+print('   '.join(number))
+number = input('Enter a five-digit integer: ')
+digit1 = number // 10000
+digit2 = (number % 10000) // 1000
+digit3 = (number % 1000) // 100
+digit4 = (number % 100) // 10
+digit5 = number % 10
+
+print(digit1,'   ',digit2,'   'digit3,'   ',digit4,'   'digit5)
+number = input('Enter a five-digit integer: ')
+digit1 = number // 10000
+digit2 = (number % 10000) // 1000
+digit3 = (number % 1000) // 100
+digit4 = (number % 100) // 10
+digit5 = number % 10
+
+print(digit1,'   ',digit2,'   'digit3,'   ',digit4,'   ',digit5)
+number = input('Enter a five-digit integer: ')
+digit1 = number // 10000
+digit2 = (number % 10000) // 1000
+digit3 = (number % 1000) // 100
+digit4 = (number % 100) // 10
+digit5 = number % 10
+
+print(digit1,'   ',digit2,'   ,'digit3,'   ',digit4,'   ',digit5)
+number = input('Enter a five-digit integer: ')
+digit1 = number // 10000
+digit2 = (number % 10000) // 1000
+digit3 = (number % 1000) // 100
+digit4 = (number % 100) // 10
+digit5 = number % 10
+
+print(digit1,'   ',digit2,'   ',digit3,'   ',digit4,'   ',digit5)
+number = int(input('Enter a five-digit integer: '))
+digit1 = number // 10000
+digit2 = (number % 10000) // 1000
+digit3 = (number % 1000) // 100
+digit4 = (number % 100) // 10
+digit5 = number % 10
+
+print(digit1,'   ',digit2,'   ',digit3,'   ',digit4,'   ',digit5)
+p = 1000
+r = .07
+a = 10
+
+a=p(1+r)**n
+print('After ten years', a)
+p = 1000
+r = .07
+a = 10
+
+a = p * (1 + r) ** n
+print('After ten years', a)
+p = 1000
+r = .07
+a = 10
+n= 10
+
+a = p * (1 + r) ** n
+print('After ten years', a)
+p = 1000
+r = .07
+a = 10
+n= [10,20,30]
+
+a = p * (1 + r) ** n
+print('After ten years', a)
+p = 1000
+r = .07
+n= 10
+
+a = p * (1 + r) ** n
+print('After ten years', a)
+p = 1000
+r = .07
+years_list = [10, 20, 30]
+
+for n in years_list:
+     a = p * (1 + r) ** n
+     print('After ten years:', '$',a)
+
+p = 1000
+r = .07
+years_list = [10, 20, 30]
+
+for n in years_list:
+     a = p * (1 + r) ** n
+     print('After ten years:', '$',.2a)
+p = 1000
+r = .07
+years_list = [10, 20, 30]
+
+for n in years_list:
+     a = p * (1 + r) ** n
+     print('After', n, 'years:', '$',a)
+
+3**4
+12345*12345
+123456789*123456789
+x=12345677890438347384393450*1233245934048372363248403095345
+x
+age = int(input('Enter your age: '))
+
+max = 220 - age
+
+target_low = 0.50 * max
+target_high = 0.85 * max
+
+
+print('Your maximum heart rate is', max)
+print('Your target heart rate range is', target_low, 'to', target_high')
+maximum heart rate = 220-age
+target heart rate = range(.5*max - .85*max)
+
+age = int(input('Enter your age: '))
+
+max = 220 - age
+
+target_low = 0.50 * max
+target_high = 0.85 * max
+
+
+print('Your maximum heart rate is', max)
+print('Your target heart rate range is', target_low, 'to', target_high)
+age = int(input('Enter your age: '))
+
+max = 220 - age
+
+target_low = 0.50 * max
+target_high = 0.85 * max
+
+
+print('Your maximum heart rate is', max)
+print('Your target heart rate range is', target_low, 'to', target_high)
+numbers = range(6)
+print(f"{'Number':<10}{'Square':<10}{'Cube':<10}")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(f"{num:<10}{square:<10}{cube:<10}")
+
+numbers = {0, 1, 2, 3, 4, 5}
+print(f"{'Number':<10}{'Square':<10}{'Cube':<10}")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(f"{num:<10}{square:<10}{cube:<10}")
+
+numbers = {0, 1, 2, 3, 4, 5}
+print("Number   Square   Cube")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(f"{num:<10}{square:<10}{cube:<10}")
+
+numbers = {0, 1, 2, 3, 4, 5}
+print("Number   Square   Cube")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(num, square, cube)
+
+numbers = {0, 1, 2, 3, 4, 5}
+print("Number\tSquare\tCube")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(num\t, square\t, cube)
+numbers = {0, 1, 2, 3, 4, 5}
+print("Number\tSquare\tCube")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(num, square, cube)
+
+numbers = {0, 1, 2, 3, 4, 5}
+print("Number\tSquare\tCube")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(num, '\t', square,'\t' cube)
+numbers = {0, 1, 2, 3, 4, 5}
+print("Number\tSquare\tCube")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(num, '\t', square,'\t' cube)
+numbers = {0, 1, 2, 3, 4, 5}
+print("Number\tSquare\tCube")
+for num in numbers:
+    square = num ** 2
+    cube = num ** 3
+    print(num, '\t', square,'\t', cube)
+
+print("Enter three different floating-point numbers:")
+
+num1 = get_float("Enter the first number: ")
+num2 = get_float("Enter the second number: ")
+num3 = get_float("Enter the third number: ")
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+if num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest, middle, largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float("Enter the first number: ")
+num2 = float("Enter the second number: ")
+num3 = float("Enter the third number: ")
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+if num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest, middle, largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+if num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest, middle, largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest, middle, largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,' ', middle,' ', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+2
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+print("Enter three different floating-point numbers:")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 <= num2 and num1 <= num3:
+    smallest = num1
+    if num2 <= num3:
+        middle = num2
+        largest = num3
+    else:
+        middle = num3
+        largest = num2
+elif num2 <= num1 and num2 <= num3:
+    smallest = num2
+    if num1 <= num3:
+        middle = num1
+        largest = num3
+    else:
+        middle = num3
+        largest = num1
+else:
+    smallest = num3
+    if num1 <= num2:
+        middle = num1
+        largest = num2
+    else:
+        middle = num2
+        largest = num1
+
+print(smallest,',', middle,',', largest)
+get_ipython().run_line_magic('save', '')
+
+In [137]: %%capture
+     ...:
+     ...:
+
+In [138]:
+
+In [138]:
