@@ -1,0 +1,43 @@
+In [89]: num1 = int(input('Enter the first integer: '))
+    ...: num2 = int(input('Enter the second integer: '))
+    ...: num3 = int(input('Enter the third integer: '))
+    ...:
+    ...:
+    ...: numbers = [num1, num2, num3]
+    ...: total_sum = sum(numbers)
+    ...: average = total_sum / len(numbers)
+    ...: product = num1 * num2 * num3
+    ...: smallest = min(numbers)
+    ...: largest = max(numbers)
+    ...:
+    ...:
+    ...: print('Sum:', total_sum)
+    ...: print('Average:', average)
+    ...: print('Product:', product)
+    ...: print('Smallest:', smallest)
+    ...: print('Largest:', largest)
+    ...:
+    ...:
+Enter the first integer: 7
+Enter the second integer: 2
+Enter the third integer: 1
+Sum: 10
+Average: 3.3333333333333335
+Product: 14
+Smallest: 1
+Largest: 7
+
+In [90]: age = int(input('Enter your age: '))
+    ...:
+    ...: max = 220 - age
+    ...:
+    ...: target_low = 0.50 * max
+    ...: target_high = 0.85 * max
+    ...:
+    ...:
+    ...: print('Your maximum heart rate is', max)
+    ...: print('Your target heart rate range is', target_low, 'to', target_high)
+    ...:
+Enter your age: 55
+Your maximum heart rate is 165
+Your target heart rate range is 82.5 to 140.25
