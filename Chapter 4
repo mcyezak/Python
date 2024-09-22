@@ -1,0 +1,1858 @@
+
+(base) C:\Users\kimbe>iPython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: def cube(x):
+   ...: """Calculate the cube of x."""
+   ...: x ** 3
+   ...: print('The cube of 2 is', cube (2))
+  Cell In[1], line 2
+    """Calculate the cube of x."""
+    ^
+IndentationError: expected an indented block after function definition on line 1
+
+
+In [2]: def cube(x):
+   ...:     """Calculate the cube of x."""
+   ...:     x ** 3
+   ...: print('The cube of 2 is', cube (2))
+The cube of 2 is None
+
+In [3]: def cube(x):
+   ...:     """Calculate the cube of x."""
+   ...:     return x ** 3
+   ...:
+   ...: print('The cube of 2 is', cube(2))
+   ...:
+The cube of 2 is 8
+
+In [4]: def mystery(x):
+   ...:     y = 0
+   ...:     for value in x:
+   ...:          y += value ** 2
+   ...:     return y
+   ...:
+
+In [5]: result = mystery([1, 2, 3, 4, 5])
+   ...: print(result)
+   ...:
+55
+
+In [6]: def seconds_since_midnight(***):
+   ...:     hour_in_seconds =
+  Cell In[6], line 1
+    def seconds_since_midnight(***):
+                                 ^
+SyntaxError: invalid syntax
+
+
+In [7]: def seconds_since_midnight(hour, minute, second=0):
+   ...:     # Convert hours and minutes to seconds
+   ...:     hour_in_seconds = hour * 3600
+   ...:     minute_in_seconds = minute * 60
+   ...:
+   ...:     # Calculate total seconds since midnight
+   ...:     total_seconds = hour_in_seconds + minute_in_seconds + second
+   ...:
+   ...:     return total_seconds
+   ...:
+   ...: # Example usage
+   ...: print("Seconds since midnight:", seconds_since_midnight(5, 30))  # 5:30 AM
+   ...:
+Seconds since midnight: 19800
+
+In [8]: def seconds_since_midnight(hour, minute, second=0):
+   ...:     # Convert hours and minutes to seconds
+   ...:     hour_in_seconds = hour * 3600
+   ...:     minute_in_seconds = minute * 60
+   ...:
+   ...:     # Calculate total seconds since midnight
+   ...:     total_seconds = hour_in_seconds + minute_in_seconds + second
+   ...:
+   ...:     return total_seconds
+   ...:
+   ...: # Example usage
+   ...: print("Seconds since midnight:", seconds_since_midnight(13, 30))  # 5:30 AM
+Seconds since midnight: 48600
+
+In [9]: def seconds_since_midnight(hour, minute, second = 0):
+   ...:       hour_in_seconds = hour * 3600
+   ...:      minute_in_seconds = minute * 60
+   ...: return (hour_in_seconds + minute_in_seconds + second)
+  File <string>:3
+    minute_in_seconds = minute * 60
+                                   ^
+IndentationError: unindent does not match any outer indentation level
+
+
+In [11]: def seconds_since_midnight(hour, minute, second = 0):
+    ...:       hour_in_seconds = hour * 3600
+    ...:       minute_in_seconds = minute * 60
+    ...: return (hour_in_seconds + minute_in_seconds + second)
+  Cell In[11], line 4
+    return (hour_in_seconds + minute_in_seconds + second)
+    ^
+SyntaxError: 'return' outside function
+
+
+In [12]: def seconds_since_midnight(hour, minute, second = 0):
+    ...:       hour_in_seconds = hour * 3600
+    ...:       minute_in_seconds = minute * 60
+    ...: return (hour_in_seconds + minute_in_seconds + second)
+  Cell In[12], line 4
+    return (hour_in_seconds + minute_in_seconds + second)
+    ^
+SyntaxError: 'return' outside function
+
+
+In [13]: def seconds_since_midnight(hour, minute, second = 0):
+    ...:       hour_in_seconds = hour * 3600
+    ...:      minute_in_seconds = minute * 60
+    ...:      return (hour_in_seconds + minute_in_seconds + second)
+  File <string>:3
+    minute_in_seconds = minute * 60
+                                   ^
+IndentationError: unindent does not match any outer indentation level
+
+
+In [15]: def seconds_since_midnight(hour, minute, second = 0):
+    ...:       hour_in_seconds = hour * 3600
+    ...:       minute_in_seconds = minute * 60
+    ...:       return (hour_in_seconds + minute_in_seconds + second)
+    ...:
+
+In [16]: seconds_since_midnight(13,30,45)
+Out[16]: 48645
+
+In [17]: def average(first_number, *args):
+    ...:
+    ...:     total = first_number
+    ...:     for number in args:
+    ...:         total += number
+    ...:     count = 1 + len(args)  # 1 for the first_number
+    ...:     return total / count
+    ...:
+
+In [18]: average()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[18], line 1
+----> 1 average()
+
+TypeError: average() missing 1 required positional argument: 'first_number'
+
+In [19]:
+
+In [19]: average(13,15)
+Out[19]: 14.0
+
+In [20]: dattime
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[20], line 1
+----> 1 dattime
+
+NameError: name 'dattime' is not defined
+
+In [21]: datetime
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[21], line 1
+----> 1 datetime
+
+NameError: name 'datetime' is not defined
+
+In [22]: datetime()
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[22], line 1
+----> 1 datetime()
+
+NameError: name 'datetime' is not defined
+
+In [23]: def (date_and_time):
+    ...: current_date_time = datetime.datetime.today()
+    ...: print(datetime.datetime.today())
+  Cell In[23], line 1
+    def (date_and_time):
+        ^
+SyntaxError: invalid syntax
+
+
+In [24]: def date_and_time():
+    ...: current_date_time = datetime.datetime.today()
+    ...: print(datetime.datetime.today())
+  Cell In[24], line 2
+    current_date_time = datetime.datetime.today()
+    ^
+IndentationError: expected an indented block after function definition on line 1
+
+
+In [25]: def date_and_time():
+    ...:     current_date_time = datetime.datetime.today()
+    ...:      print(datetime.datetime.today())
+  Cell In[25], line 3
+    print(datetime.datetime.today())
+    ^
+IndentationError: unexpected indent
+
+
+In [26]: def date_and_time():
+    ...:     current_date_time = datetime.datetime.today()
+    ...: print(datetime.datetime.today())
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[26], line 3
+      1 def date_and_time():
+      2     current_date_time = datetime.datetime.today()
+----> 3 print(datetime.datetime.today())
+
+NameError: name 'datetime' is not defined
+
+In [27]: def date_and_time():
+    ...:
+    ...: print(datetime.datetime.today())
+  Cell In[27], line 3
+    print(datetime.datetime.today())
+    ^
+IndentationError: expected an indented block after function definition on line 1
+
+
+In [28]: def date_and_time():
+    ...:
+    ...: print(datetime.datetime.today())
+  Cell In[28], line 3
+    print(datetime.datetime.today())
+    ^
+IndentationError: expected an indented block after function definition on line 1
+
+
+In [29]: def date_and_time():
+    ...: print(datetime.datetime.today())
+  Cell In[29], line 2
+    print(datetime.datetime.today())
+    ^
+IndentationError: expected an indented block after function definition on line 1
+
+
+In [30]: def date_and_time():
+    ...:     print(datetime.datetime.today())
+    ...:
+
+In [31]: date_and_time
+Out[31]: <function __main__.date_and_time()>
+
+In [32]: def date_and_time():
+    ...:     current_date_time = datetime.datetime.today()
+    ...:      print(datetime.datetime.today())
+  Cell In[32], line 3
+    print(datetime.datetime.today())
+    ^
+IndentationError: unexpected indent
+
+
+In [33]: def date_and_time():
+    ...:     current_date_time = datetime.datetime.today()
+    ...:     print(datetime.datetime.today())
+
+In [34]: date_and_time_time
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[34], line 1
+----> 1 date_and_time_time
+
+NameError: name 'date_and_time_time' is not defined
+
+In [35]: date_and_time
+Out[35]: <function __main__.date_and_time()>
+
+In [36]: import datetime
+    ...:
+    ...: def date_and_time():
+    ...:     current_date_time = datetime.datetime.today()
+    ...:     print(datetime.datetime.today())
+    ...:
+    ...: # Example usage
+    ...: date_and_time()
+    ...:
+2024-09-22 13:46:36.918893
+
+In [37]: def date_and_time():
+    ...: print(datetime.datetime.today())
+  Cell In[37], line 2
+    print(datetime.datetime.today())
+    ^
+IndentationError: expected an indented block after function definition on line 1
+
+
+In [38]: def date_and_time():
+    ...:     current_date_time = datetime.datetime.today()
+    ...:      print(datetime.datetime.today())
+  Cell In[38], line 3
+    print(datetime.datetime.today())
+    ^
+IndentationError: unexpected indent
+
+
+In [39]: def date_and_time():
+    ...:     current_date_time = datetime.datetime.today()
+    ...: print(datetime.datetime.today())
+2024-09-22 13:47:26.690055
+
+In [40]: date_and_time()
+
+In [41]:
+
+In [41]: def date_and_time():
+    ...:     print(datetime.datetime.today())
+    ...:
+
+In [42]: date_and_time()
+2024-09-22 13:48:55.297541
+
+In [43]: round(13.56449)
+Out[43]: 14
+
+In [44]: round(13.56449,2)
+Out[44]: 13.56
+
+In [45]: round(13.56449,3)
+Out[45]: 13.564
+
+In [46]: for x in range(101)
+    ...: print("Celsius\tFahrenheit")
+    ...: for num in numbers:
+    ...:     Celsius = x
+    ...:     Fahrenheit = (9/5) * x + 32
+    ...:     print(Celsius, '\t', Fahrenheit,)
+  Cell In[46], line 1
+    for x in range(101)
+                       ^
+SyntaxError: expected ':'
+
+
+In [47]: for x in range(101):
+    ...: print("Celsius\tFahrenheit")
+    ...: for num in numbers:
+    ...:     Celsius = x
+    ...:     Fahrenheit = (9/5) * x + 32
+    ...:     print(Celsius, '\t', Fahrenheit,)
+  Cell In[47], line 2
+    print("Celsius\tFahrenheit")
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+
+
+In [48]: for x in range(101):
+    ...:     print("Celsius\tFahrenheit")
+    ...:     Celsius = x
+    ...:     Fahrenheit = (9/5) * x + 32
+    ...:     print(Celsius, '\t', Fahrenheit,)
+    ...:
+Celsius Fahrenheit
+0        32.0
+Celsius Fahrenheit
+1        33.8
+Celsius Fahrenheit
+2        35.6
+Celsius Fahrenheit
+3        37.4
+Celsius Fahrenheit
+4        39.2
+Celsius Fahrenheit
+5        41.0
+Celsius Fahrenheit
+6        42.8
+Celsius Fahrenheit
+7        44.6
+Celsius Fahrenheit
+8        46.4
+Celsius Fahrenheit
+9        48.2
+Celsius Fahrenheit
+10       50.0
+Celsius Fahrenheit
+11       51.8
+Celsius Fahrenheit
+12       53.6
+Celsius Fahrenheit
+13       55.400000000000006
+Celsius Fahrenheit
+14       57.2
+Celsius Fahrenheit
+15       59.0
+Celsius Fahrenheit
+16       60.8
+Celsius Fahrenheit
+17       62.6
+Celsius Fahrenheit
+18       64.4
+Celsius Fahrenheit
+19       66.2
+Celsius Fahrenheit
+20       68.0
+Celsius Fahrenheit
+21       69.80000000000001
+Celsius Fahrenheit
+22       71.6
+Celsius Fahrenheit
+23       73.4
+Celsius Fahrenheit
+24       75.2
+Celsius Fahrenheit
+25       77.0
+Celsius Fahrenheit
+26       78.80000000000001
+Celsius Fahrenheit
+27       80.6
+Celsius Fahrenheit
+28       82.4
+Celsius Fahrenheit
+29       84.2
+Celsius Fahrenheit
+30       86.0
+Celsius Fahrenheit
+31       87.80000000000001
+Celsius Fahrenheit
+32       89.6
+Celsius Fahrenheit
+33       91.4
+Celsius Fahrenheit
+34       93.2
+Celsius Fahrenheit
+35       95.0
+Celsius Fahrenheit
+36       96.8
+Celsius Fahrenheit
+37       98.60000000000001
+Celsius Fahrenheit
+38       100.4
+Celsius Fahrenheit
+39       102.2
+Celsius Fahrenheit
+40       104.0
+Celsius Fahrenheit
+41       105.8
+Celsius Fahrenheit
+42       107.60000000000001
+Celsius Fahrenheit
+43       109.4
+Celsius Fahrenheit
+44       111.2
+Celsius Fahrenheit
+45       113.0
+Celsius Fahrenheit
+46       114.8
+Celsius Fahrenheit
+47       116.60000000000001
+Celsius Fahrenheit
+48       118.4
+Celsius Fahrenheit
+49       120.2
+Celsius Fahrenheit
+50       122.0
+Celsius Fahrenheit
+51       123.8
+Celsius Fahrenheit
+52       125.60000000000001
+Celsius Fahrenheit
+53       127.4
+Celsius Fahrenheit
+54       129.2
+Celsius Fahrenheit
+55       131.0
+Celsius Fahrenheit
+56       132.8
+Celsius Fahrenheit
+57       134.60000000000002
+Celsius Fahrenheit
+58       136.4
+Celsius Fahrenheit
+59       138.2
+Celsius Fahrenheit
+60       140.0
+Celsius Fahrenheit
+61       141.8
+Celsius Fahrenheit
+62       143.60000000000002
+Celsius Fahrenheit
+63       145.4
+Celsius Fahrenheit
+64       147.2
+Celsius Fahrenheit
+65       149.0
+Celsius Fahrenheit
+66       150.8
+Celsius Fahrenheit
+67       152.60000000000002
+Celsius Fahrenheit
+68       154.4
+Celsius Fahrenheit
+69       156.2
+Celsius Fahrenheit
+70       158.0
+Celsius Fahrenheit
+71       159.8
+Celsius Fahrenheit
+72       161.6
+Celsius Fahrenheit
+73       163.4
+Celsius Fahrenheit
+74       165.20000000000002
+Celsius Fahrenheit
+75       167.0
+Celsius Fahrenheit
+76       168.8
+Celsius Fahrenheit
+77       170.6
+Celsius Fahrenheit
+78       172.4
+Celsius Fahrenheit
+79       174.20000000000002
+Celsius Fahrenheit
+80       176.0
+Celsius Fahrenheit
+81       177.8
+Celsius Fahrenheit
+82       179.6
+Celsius Fahrenheit
+83       181.4
+Celsius Fahrenheit
+84       183.20000000000002
+Celsius Fahrenheit
+85       185.0
+Celsius Fahrenheit
+86       186.8
+Celsius Fahrenheit
+87       188.6
+Celsius Fahrenheit
+88       190.4
+Celsius Fahrenheit
+89       192.20000000000002
+Celsius Fahrenheit
+90       194.0
+Celsius Fahrenheit
+91       195.8
+Celsius Fahrenheit
+92       197.6
+Celsius Fahrenheit
+93       199.4
+Celsius Fahrenheit
+94       201.20000000000002
+Celsius Fahrenheit
+95       203.0
+Celsius Fahrenheit
+96       204.8
+Celsius Fahrenheit
+97       206.6
+Celsius Fahrenheit
+98       208.4
+Celsius Fahrenheit
+99       210.20000000000002
+Celsius Fahrenheit
+100      212.0
+
+In [49]: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     Fahrenheit = (9/5) * x + 32
+    ...:     print(Celsius, '\t', Fahrenheit,)
+    ...:
+Celsius Fahrenheit
+0        32.0
+1        33.8
+2        35.6
+3        37.4
+4        39.2
+5        41.0
+6        42.8
+7        44.6
+8        46.4
+9        48.2
+10       50.0
+11       51.8
+12       53.6
+13       55.400000000000006
+14       57.2
+15       59.0
+16       60.8
+17       62.6
+18       64.4
+19       66.2
+20       68.0
+21       69.80000000000001
+22       71.6
+23       73.4
+24       75.2
+25       77.0
+26       78.80000000000001
+27       80.6
+28       82.4
+29       84.2
+30       86.0
+31       87.80000000000001
+32       89.6
+33       91.4
+34       93.2
+35       95.0
+36       96.8
+37       98.60000000000001
+38       100.4
+39       102.2
+40       104.0
+41       105.8
+42       107.60000000000001
+43       109.4
+44       111.2
+45       113.0
+46       114.8
+47       116.60000000000001
+48       118.4
+49       120.2
+50       122.0
+51       123.8
+52       125.60000000000001
+53       127.4
+54       129.2
+55       131.0
+56       132.8
+57       134.60000000000002
+58       136.4
+59       138.2
+60       140.0
+61       141.8
+62       143.60000000000002
+63       145.4
+64       147.2
+65       149.0
+66       150.8
+67       152.60000000000002
+68       154.4
+69       156.2
+70       158.0
+71       159.8
+72       161.6
+73       163.4
+74       165.20000000000002
+75       167.0
+76       168.8
+77       170.6
+78       172.4
+79       174.20000000000002
+80       176.0
+81       177.8
+82       179.6
+83       181.4
+84       183.20000000000002
+85       185.0
+86       186.8
+87       188.6
+88       190.4
+89       192.20000000000002
+90       194.0
+91       195.8
+92       197.6
+93       199.4
+94       201.20000000000002
+95       203.0
+96       204.8
+97       206.6
+98       208.4
+99       210.20000000000002
+100      212.0
+
+In [50]: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     Fahrenheit = round((9/5) * x + 32),1)
+    ...:     print(Celsius, '\t', Fahrenheit,)
+  Cell In[50], line 4
+    Fahrenheit = round((9/5) * x + 32),1)
+                                        ^
+SyntaxError: unmatched ')'
+
+
+In [51]: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     Fahrenheit = round((9/5) * x + 32),2)
+    ...:     print(Celsius, '\t', Fahrenheit,)
+  Cell In[51], line 4
+    Fahrenheit = round((9/5) * x + 32),2)
+                                        ^
+SyntaxError: unmatched ')'
+
+
+In [52]: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     Fahrenheit = round((9/5) * x + 32,1)
+    ...:     print(Celsius, '\t', Fahrenheit)
+    ...:
+Celsius Fahrenheit
+0        32.0
+1        33.8
+2        35.6
+3        37.4
+4        39.2
+5        41.0
+6        42.8
+7        44.6
+8        46.4
+9        48.2
+10       50.0
+11       51.8
+12       53.6
+13       55.4
+14       57.2
+15       59.0
+16       60.8
+17       62.6
+18       64.4
+19       66.2
+20       68.0
+21       69.8
+22       71.6
+23       73.4
+24       75.2
+25       77.0
+26       78.8
+27       80.6
+28       82.4
+29       84.2
+30       86.0
+31       87.8
+32       89.6
+33       91.4
+34       93.2
+35       95.0
+36       96.8
+37       98.6
+38       100.4
+39       102.2
+40       104.0
+41       105.8
+42       107.6
+43       109.4
+44       111.2
+45       113.0
+46       114.8
+47       116.6
+48       118.4
+49       120.2
+50       122.0
+51       123.8
+52       125.6
+53       127.4
+54       129.2
+55       131.0
+56       132.8
+57       134.6
+58       136.4
+59       138.2
+60       140.0
+61       141.8
+62       143.6
+63       145.4
+64       147.2
+65       149.0
+66       150.8
+67       152.6
+68       154.4
+69       156.2
+70       158.0
+71       159.8
+72       161.6
+73       163.4
+74       165.2
+75       167.0
+76       168.8
+77       170.6
+78       172.4
+79       174.2
+80       176.0
+81       177.8
+82       179.6
+83       181.4
+84       183.2
+85       185.0
+86       186.8
+87       188.6
+88       190.4
+89       192.2
+90       194.0
+91       195.8
+92       197.6
+93       199.4
+94       201.2
+95       203.0
+96       204.8
+97       206.6
+98       208.4
+99       210.2
+100      212.0
+
+In [53]: def Fahrenheit():
+    ...: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     Fahrenheit = round((9/5) * x + 32,1)
+    ...:     print(Celsius, '\t', Fahrenheit)
+  Cell In[53], line 2
+    print("Celsius\tFahrenheit")
+    ^
+IndentationError: expected an indented block after function definition on line 1
+
+
+In [54]: def Fahrenheit(x):
+    ...:     return round((9/5) * x + 32,1)
+    ...:
+    ...: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     Fahrenheit = round((9/5) * x + 32,1)
+    ...:     print(Celsius, '\t', Fahrenheit)
+    ...:
+Celsius Fahrenheit
+0        32.0
+1        33.8
+2        35.6
+3        37.4
+4        39.2
+5        41.0
+6        42.8
+7        44.6
+8        46.4
+9        48.2
+10       50.0
+11       51.8
+12       53.6
+13       55.4
+14       57.2
+15       59.0
+16       60.8
+17       62.6
+18       64.4
+19       66.2
+20       68.0
+21       69.8
+22       71.6
+23       73.4
+24       75.2
+25       77.0
+26       78.8
+27       80.6
+28       82.4
+29       84.2
+30       86.0
+31       87.8
+32       89.6
+33       91.4
+34       93.2
+35       95.0
+36       96.8
+37       98.6
+38       100.4
+39       102.2
+40       104.0
+41       105.8
+42       107.6
+43       109.4
+44       111.2
+45       113.0
+46       114.8
+47       116.6
+48       118.4
+49       120.2
+50       122.0
+51       123.8
+52       125.6
+53       127.4
+54       129.2
+55       131.0
+56       132.8
+57       134.6
+58       136.4
+59       138.2
+60       140.0
+61       141.8
+62       143.6
+63       145.4
+64       147.2
+65       149.0
+66       150.8
+67       152.6
+68       154.4
+69       156.2
+70       158.0
+71       159.8
+72       161.6
+73       163.4
+74       165.2
+75       167.0
+76       168.8
+77       170.6
+78       172.4
+79       174.2
+80       176.0
+81       177.8
+82       179.6
+83       181.4
+84       183.2
+85       185.0
+86       186.8
+87       188.6
+88       190.4
+89       192.2
+90       194.0
+91       195.8
+92       197.6
+93       199.4
+94       201.2
+95       203.0
+96       204.8
+97       206.6
+98       208.4
+99       210.2
+100      212.0
+
+In [55]: def Fahrenheit(3)
+  Cell In[55], line 1
+    def Fahrenheit(3)
+                   ^
+SyntaxError: invalid syntax
+
+
+In [56]: def Fahrenheit(x):
+    ...:     return round((9/5) * x + 32,1)
+    ...:
+    ...: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     F = Fahrenheit(x)
+    ...:      print(Celsius, '\t', F)
+  Cell In[56], line 8
+    print(Celsius, '\t', F)
+    ^
+IndentationError: unexpected indent
+
+
+In [57]: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     F = Fahrenheit(x)
+    ...:     print(Celsius, '\t', F)
+    ...:
+Celsius Fahrenheit
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[57], line 4
+      2 for x in range(101):
+      3     Celsius = x
+----> 4     F = Fahrenheit(x)
+      5     print(Celsius, '\t', F)
+
+TypeError: 'float' object is not callable
+
+In [58]: def Fahrenheit(x):
+    ...:     return round((9/5) * x + 32,1)
+    ...:
+    ...: print("Celsius\tFahrenheit")
+    ...: for x in range(101):
+    ...:     Celsius = x
+    ...:     Fah = Fahrenheit(x)
+    ...:     print(Celsius, '\t', Fah)
+    ...:
+Celsius Fahrenheit
+0        32.0
+1        33.8
+2        35.6
+3        37.4
+4        39.2
+5        41.0
+6        42.8
+7        44.6
+8        46.4
+9        48.2
+10       50.0
+11       51.8
+12       53.6
+13       55.4
+14       57.2
+15       59.0
+16       60.8
+17       62.6
+18       64.4
+19       66.2
+20       68.0
+21       69.8
+22       71.6
+23       73.4
+24       75.2
+25       77.0
+26       78.8
+27       80.6
+28       82.4
+29       84.2
+30       86.0
+31       87.8
+32       89.6
+33       91.4
+34       93.2
+35       95.0
+36       96.8
+37       98.6
+38       100.4
+39       102.2
+40       104.0
+41       105.8
+42       107.6
+43       109.4
+44       111.2
+45       113.0
+46       114.8
+47       116.6
+48       118.4
+49       120.2
+50       122.0
+51       123.8
+52       125.6
+53       127.4
+54       129.2
+55       131.0
+56       132.8
+57       134.6
+58       136.4
+59       138.2
+60       140.0
+61       141.8
+62       143.6
+63       145.4
+64       147.2
+65       149.0
+66       150.8
+67       152.6
+68       154.4
+69       156.2
+70       158.0
+71       159.8
+72       161.6
+73       163.4
+74       165.2
+75       167.0
+76       168.8
+77       170.6
+78       172.4
+79       174.2
+80       176.0
+81       177.8
+82       179.6
+83       181.4
+84       183.2
+85       185.0
+86       186.8
+87       188.6
+88       190.4
+89       192.2
+90       194.0
+91       195.8
+92       197.6
+93       199.4
+94       201.2
+95       203.0
+96       204.8
+97       206.6
+98       208.4
+99       210.2
+100      212.0
+
+In [59]: def Fahrenheit(3)
+  Cell In[59], line 1
+    def Fahrenheit(3)
+                   ^
+SyntaxError: invalid syntax
+
+
+In [60]: Fabrenheit(3)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[60], line 1
+----> 1 Fabrenheit(3)
+
+NameError: name 'Fabrenheit' is not defined
+
+In [61]: Farenheit(3)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[61], line 1
+----> 1 Farenheit(3)
+
+NameError: name 'Farenheit' is not defined
+
+In [62]: Fahrenheit(2)
+Out[62]: 35.6
+
+In [63]:
+
+In [63]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = int(input('Enter an integer: '))
+    ...: number = 45
+    ...:     if number >= 45:
+    ...:         print('Too High')
+    ...:     if number = 45:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:     if number <= 45:
+    ...:         print('Too low')
+  Cell In[63], line 4
+    if number >= 45:
+    ^
+IndentationError: unexpected indent
+
+
+In [64]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = int(input('Enter an integer: '))
+    ...: number = 45
+    ...: if number >= 45:
+    ...:     print('Too High')
+    ...: if number = 45:
+    ...:     print('Congratulations! You guessed the number!')
+    ...: if number <= 45:
+    ...:     print('Too low')
+  Cell In[64], line 6
+    if number = 45:
+       ^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
+
+In [65]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = int(input('Enter an integer: '))
+    ...: number = 45
+    ...: if number >= 45:
+    ...:     print('Too High')
+    ...: if number == 45:
+    ...:     print('Congratulations! You guessed the number!')
+    ...: if number <= 45:
+    ...:     print('Too low')
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 700
+Too High
+Congratulations! You guessed the number!
+Too low
+
+In [66]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = int(input('Enter an integer: '))
+    ...: number = 45
+    ...: if number >= 45:
+    ...:     print('Too High)
+    ...: else if number == 45:
+    ...:     print('Congratulations! You guessed the number!')
+    ...: else if number <= 45:
+    ...:     print('Too low')
+  Cell In[66], line 5
+    print('Too High)
+          ^
+SyntaxError: unterminated string literal (detected at line 5)
+
+
+In [67]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = int(input('Enter an integer: '))
+    ...: number = 45
+    ...: if number >= 45:
+    ...:     print('Too High')
+    ...: else if number == 45:
+    ...:     print('Congratulations! You guessed the number!')
+    ...: else if number <= 45:
+    ...:     print('Too low')
+    ...:
+  Cell In[67], line 6
+    else if number == 45:
+         ^
+SyntaxError: expected ':'
+
+
+In [68]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = int(input('Enter an integer: '))
+    ...: number = 45
+    ...: if number >= 45:
+    ...:     print('Too High')
+    ...: else number == 45:
+    ...:     print('Congratulations! You guessed the number!')
+    ...: else number <= 45:
+    ...:     print('Too low')
+  Cell In[68], line 6
+    else number == 45:
+         ^
+SyntaxError: expected ':'
+
+
+In [69]:  print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = int(input('Enter an integer: '))
+    ...: number = 45
+    ...: if number >= 45:
+    ...:     print('Too High')
+    ...: elif number == 45:
+    ...:     print('Congratulations! You guessed the number!')
+    ...: elif number <= 45:
+    ...:     print('Too low')
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 88
+Too High
+
+In [70]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:
+    ...: found = false
+    ...: while found = false
+    ...:     number = int(input('Enter an integer: '))
+    ...:      number = 45
+    ...:      if number >= 45:
+    ...:         print('Too High. Try again')
+    ...:     elif number == 45:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:     elif number <= 45:
+    ...:         print('Too low. Try again.')
+  Cell In[70], line 4
+    while found = false
+          ^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
+
+In [71]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:
+    ...: found = false
+    ...: while found == false
+    ...:     number = int(input('Enter an integer: '))
+    ...:      number = 45
+    ...:      if number >= 45:
+    ...:         print('Too High. Try again')
+    ...:     elif number == 45:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = true
+    ...:     elif number <= 45:
+    ...:         print('Too low. Try again.')
+  Cell In[71], line 4
+    while found == false
+                        ^
+SyntaxError: expected ':'
+
+
+In [72]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:
+    ...: found = false
+    ...: while found == false:
+    ...:     number = int(input('Enter an integer: '))
+    ...:      number = 45
+    ...:      if number >= 45:
+    ...:         print('Too High. Try again')
+    ...:     elif number == 45:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = true
+    ...:     elif number <= 45:
+    ...:         print('Too low. Try again.')
+  Cell In[72], line 6
+    number = 45
+    ^
+IndentationError: unexpected indent
+
+
+In [73]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:
+    ...: found = false
+    ...: while found == false:
+    ...:     number = int(input('Enter an integer: '))
+    ...:     number = 45
+    ...:     if number >= 45:
+    ...:         print('Too High. Try again')
+    ...:     elif number == 45:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = true
+    ...:     elif number <= 45:
+    ...:         print('Too low. Try again.')
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[73], line 3
+      1 print('Guess my number between 1 and 1000 with the fewest guesses')
+----> 3 found = false
+      4 while found == false:
+      5     number = int(input('Enter an integer: '))
+
+NameError: name 'false' is not defined
+
+In [74]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:
+    ...: found = False
+    ...: while found == False:
+    ...:     number = int(input('Enter an integer: '))
+    ...:     number = 45
+    ...:     if number >= 45:
+    ...:         print('Too High. Try again')
+    ...:     elif number == 45:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:     elif number <= 45:
+    ...:         print('Too low. Try again.')
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 78
+Too High. Try again
+Enter an integer: 23
+Too High. Try again
+Enter an integer: 0
+Too High. Try again
+Enter an integer: 123
+Too High. Try again
+Enter an integer: 45
+Too High. Try again
+Enter an integer: ---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+Cell In[74], line 5
+      3 found = False
+      4 while found == False:
+----> 5     number = int(input('Enter an integer: '))
+      6     number = 45
+      7     if number >= 45:
+
+KeyboardInterrupt:
+
+In [75]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = 45
+    ...:
+    ...: found = False
+    ...: while found == False:
+    ...:     g_number = int(input('Enter an integer: '))
+    ...:     if g_number >= number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:     elif g_number <= number:
+    ...:         print('Too low. Try again.')
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 50
+Too High. Try again
+Enter an integer: 10
+Too low. Try again.
+Enter an integer: 45
+Too High. Try again
+Enter an integer: ---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+Cell In[75], line 6
+      4 found = False
+      5 while found == False:
+----> 6     g_number = int(input('Enter an integer: '))
+      7     if g_number >= number:
+      8         print('Too High. Try again')
+
+KeyboardInterrupt:
+
+In [76]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = 45
+    ...:
+    ...: found = False
+    ...: while found == False:
+    ...:     g_number = int(input('Enter an integer: '))
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 49
+Too High. Try again
+Enter an integer: 1
+Too low. Try again.
+Enter an integer: 45
+Congratulations! You guessed the number!
+
+    ...: def generate_number():
+    ...:     seed = int(time.time())
+    ...:     return seed % 1000 + 1
+    ...:
+    ...: def play_game():
+    ...:     number = generate_number()
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:
+    ...:     found = False
+    ...:     while not found:
+    ...:         g_number = int(input('Enter an integer: '))
+    ...:
+    ...:         if g_number > number:
+    ...:             print('Too High. Try again.')
+    ...:         elif g_number < number:
+    ...:             print('Too Low. Try again.')
+    ...:         else:
+    ...:             print('Congratulations! You guessed the number!')
+    ...:             found = True
+    ...:
+    ...: # Main loop for the game
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     # Ask if the user wants to play again
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:         print('Thanks for playing!')
+    ...:         break
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 45
+Too Low. Try again.
+Enter an integer: 999
+Too High. Try again.
+Enter an integer: 600
+Too High. Try again.
+Enter an integer: 500
+Too High. Try again.
+Enter an integer: 400
+Too High. Try again.
+Enter an integer: 300
+Too High. Try again.
+Enter an integer: 200
+Too High. Try again.
+Enter an integer: 100
+Too Low. Try again.
+Enter an integer: 130
+Too Low. Try again.
+Enter an integer: 150
+Too High. Try again.
+Enter an integer: 140
+Too High. Try again.
+Enter an integer: 135
+Congratulations! You guessed the number!
+Do you want to play again? (yes/no): y
+Thanks for playing!
+
+In [78]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = 45
+    ...:
+    ...: found = False
+    ...: while found == False:
+    ...:     g_number = int(input('Enter an integer: '))
+    ...:      if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:         print('Thanks for playing!')
+    ...:         break
+  Cell In[78], line 7
+    if g_number > number:
+    ^
+IndentationError: unexpected indent
+
+
+In [79]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = 45
+    ...:
+    ...: found = False
+    ...: while found == False:
+    ...:     g_number = int(input('Enter an integer: '))
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:         print('Thanks for playing!')
+    ...:         break  # Exit the loop if sentinel value is encountered
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 100
+Too High. Try again
+Enter an integer: 2
+Too low. Try again.
+Enter an integer: 45
+Congratulations! You guessed the number!
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: ---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+Cell In[79], line 17
+     14         print('Too low. Try again.')
+     16 while True:
+---> 17     play_game()
+     18     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+     19     if play_again != 'yes':
+
+Cell In[77], line 13, in play_game()
+     11 found = False
+     12 while not found:
+---> 13     g_number = int(input('Enter an integer: '))
+     15     if g_number > number:
+     16         print('Too High. Try again.')
+
+KeyboardInterrupt:
+
+In [80]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = 45
+    ...:
+    ...: found = False
+    ...: while found == False:
+    ...:     g_number = int(input('Enter an integer: '))
+    ...:      if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:         print('Thanks for playing!')
+    ...:         break
+  Cell In[80], line 7
+    if g_number > number:
+    ^
+IndentationError: unexpected indent
+
+
+In [81]: print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...: number = 45
+    ...:
+    ...: found = False
+    ...: while found == False:
+    ...:     g_number = int(input('Enter an integer: '))
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:         print('Thanks for playing!')
+    ...:         break
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 50
+Too High. Try again
+Enter an integer: 45
+Congratulations! You guessed the number!
+Do you want to play again? (yes/no): yes
+Do you want to play again? (yes/no): yes
+Do you want to play again? (yes/no): no
+Thanks for playing!
+
+In [82]: def play_game():
+    ...:
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:     number = 45
+    ...:
+    ...:     found = False
+    ...:     while found == False:
+    ...:     g_number = int(input('Enter an integer: '))
+    ...:
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:         if play_again != 'yes':
+    ...:             print('Thanks for playing!')
+    ...:             break
+  Cell In[82], line 8
+    g_number = int(input('Enter an integer: '))
+    ^
+IndentationError: expected an indented block after 'while' statement on line 7
+
+
+In [83]: def play_game():
+    ...:
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:     number = 45
+    ...:
+    ...:     found = False
+    ...:     while found == False:
+    ...:         g_number = int(input('Enter an integer: '))
+    ...:
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:         if play_again != 'yes':
+    ...:             print('Thanks for playing!')
+    ...:             break
+  Cell In[83], line 23
+    if play_again != 'yes':
+    ^
+IndentationError: unexpected indent
+
+
+In [84]: def play_game():
+    ...:
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:     number = 45
+    ...:
+    ...:     found = False
+    ...:     while found == False:
+    ...:         g_number = int(input('Enter an integer: '))
+    ...:
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:
+    ...:     elif g_number < number:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:             print('Thanks for playing!')
+    ...:             break
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 67
+Enter an integer: 23
+Enter an integer: 12
+Enter an integer: def play_game():
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[84], line 20
+     17         print('Too low. Try again.')
+     19 while True:
+---> 20     play_game()
+     22     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+     23     if play_again != 'yes':
+
+Cell In[84], line 8, in play_game()
+      6 found = False
+      7 while found == False:
+----> 8     g_number = int(input('Enter an integer: '))
+     10 if g_number > number:
+     11     print('Too High. Try again')
+
+ValueError: invalid literal for int() with base 10: 'def play_game():'
+
+In [85]:
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:     number = 45
+    ...:
+    ...:     found = False
+    ...:     while not found:
+    ...:         g_number = int(input('Enter an integer: '))
+    ...:
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:     else:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:             print('Thanks for playing!')
+    ...:             break
+    ...:
+  Cell In[85], line 17
+    play_game()
+    ^
+IndentationError: expected an indented block after 'while' statement on line 16
+
+
+In [86]: def play_game():
+    ...:
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:     number = 45
+    ...:
+    ...:     found = False
+    ...:     while not found:
+    ...:         g_number = int(input('Enter an integer: '))
+    ...:
+    ...:     if g_number > number:
+    ...:         print('Too High. Try again')
+    ...:     elif g_number == number:
+    ...:         print('Congratulations! You guessed the number!')
+    ...:         found = True
+    ...:     else:
+    ...:         print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:             print('Thanks for playing!')
+    ...:             break
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 400
+Enter an integer: ---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+Cell In[86], line 19
+     16         print('Too low. Try again.')
+     18 while True:
+---> 19     play_game()
+     21     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+     22     if play_again != 'yes':
+
+Cell In[86], line 8, in play_game()
+      6 found = False
+      7 while not found:
+----> 8     g_number = int(input('Enter an integer: '))
+     10 if g_number > number:
+     11     print('Too High. Try again')
+
+KeyboardInterrupt:
+
+In [87]: def play_game():
+    ...:
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:     number = 45
+    ...:
+    ...:     found = False
+    ...:     while not found:
+    ...:         g_number = int(input('Enter an integer: '))
+    ...:
+    ...:         if g_number > number:
+    ...:             print('Too High. Try again')
+    ...:         elif g_number == number:
+    ...:             print('Congratulations! You guessed the number!')
+    ...:             found = True
+    ...:         else:
+    ...:             print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:             print('Thanks for playing!')
+    ...:             break
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 66
+Too High. Try again
+Enter an integer: 10
+Too low. Try again.
+Enter an integer: 45
+Congratulations! You guessed the number!
+Do you want to play again? (yes/no): yes
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: ---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+Cell In[87], line 19
+     16             print('Too low. Try again.')
+     18 while True:
+---> 19     play_game()
+     21     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+     22     if play_again != 'yes':
+
+Cell In[87], line 8, in play_game()
+      6 found = False
+      7 while not found:
+----> 8     g_number = int(input('Enter an integer: '))
+     10     if g_number > number:
+     11         print('Too High. Try again')
+
+KeyboardInterrupt:
+
+In [88]:
+
+In [88]: import random
+    ...: def play_game():
+    ...:
+    ...:     print('Guess my number between 1 and 1000 with the fewest guesses')
+    ...:     number = random.randint(1,1000)
+    ...:
+    ...:     found = False
+    ...:     while not found:
+    ...:         g_number = int(input('Enter an integer: '))
+    ...:
+    ...:         if g_number > number:
+    ...:             print('Too High. Try again')
+    ...:         elif g_number == number:
+    ...:             print('Congratulations! You guessed the number!')
+    ...:             found = True
+    ...:         else:
+    ...:             print('Too low. Try again.')
+    ...:
+    ...: while True:
+    ...:     play_game()
+    ...:
+    ...:     play_again = input('Do you want to play again? (yes/no): ').strip().lower()
+    ...:     if play_again != 'yes':
+    ...:             print('Thanks for playing!')
+    ...:             break
+    ...:
+Guess my number between 1 and 1000 with the fewest guesses
+Enter an integer: 45
+Too low. Try again.
+Enter an integer: 100
+Too low. Try again.
+Enter an integer: 500
+Too low. Try again.
+Enter an integer: 700
+Too low. Try again.
+Enter an integer: 800
+Too low. Try again.
+Enter an integer: 900
+Too High. Try again
+Enter an integer: 870
+Too low. Try again.
+Enter an integer: 880
+Too low. Try again.
+Enter an integer: 890
+Too low. Try again.
+Enter an integer: 899
+Congratulations! You guessed the number!
+Do you want to play again? (yes/no): no
+Thanks for playing!
+
+In [89]:
