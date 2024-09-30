@@ -1,0 +1,1057 @@
+
+(base) C:\Users\kimbe>iPython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: day, high_temperature = ('Monday', 87 , 65)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[1], line 1
+----> 1 day, high_temperature = ('Monday', 87 , 65)
+
+ValueError: too many values to unpack (expected 2)
+
+In [2]:
+
+In [2]: numbers = [1,2,3,4,5]
+
+In [3]: numbers[10}
+  Cell In[3], line 1
+    numbers[10}
+              ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '['
+
+
+In [4]: numbers[10]
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[4], line 1
+----> 1 numbers[10]
+
+IndexError: list index out of range
+
+In [5]: name = 'amanda'
+
+In [6]: name[0] = 'A'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[6], line 1
+----> 1 name[0] = 'A'
+
+TypeError: 'str' object does not support item assignment
+
+In [7]: numbers = [1,2,3,4,5]
+
+In [8]: numbers[3,4]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[8], line 1
+----> 1 numbers[3,4]
+
+TypeError: list indices must be integers or slices, not tuple
+
+In [9]: student_tuple = )'Amanda', 'Blue', [98, 75, 87])
+  Cell In[9], line 1
+    student_tuple = )'Amanda', 'Blue', [98, 75, 87])
+                    ^
+SyntaxError: unmatched ')'
+
+
+In [10]: student_tuple = ('Amanda', 'Blue', [98, 75, 87])
+
+In [11]: student_tuple = 'Ariana'
+
+In [12]: In [10]: student_tuple = ('Amanda', 'Blue', [98, 75, 87])
+    ...:
+    ...: In [11]: student_tuple[0] = 'Ariana'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[12], line 3
+      1 student_tuple = ('Amanda', 'Blue', [98, 75, 87])
+----> 3 student_tuple[0] = 'Ariana'
+
+TypeError: 'tuple' object does not support item assignment
+
+In [13]: ('Monday', 87,65) + 'Tuesday'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[13], line 1
+----> 1 ('Monday', 87,65) + 'Tuesday'
+
+TypeError: can only concatenate tuple (not "str") to tuple
+
+In [14]: 'A' += ('B', 'C')
+  Cell In[14], line 1
+    'A' += ('B', 'C')
+    ^
+SyntaxError: 'literal' is an illegal expression for augmented assignment
+
+
+In [15]: x=7
+
+In [16]: del x
+
+In [17]: print(x)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[17], line 1
+----> 1 print(x)
+
+NameError: name 'x' is not defined
+
+In [18]: numbers = [1,2,3,4,5]
+
+In [19]: numbers.index(10)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[19], line 1
+----> 1 numbers.index(10)
+
+ValueError: 10 is not in list
+
+In [20]: numbers.extend(6,7,8)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[20], line 1
+----> 1 numbers.extend(6,7,8)
+
+TypeError: list.extend() takes exactly one argument (3 given)
+
+In [21]: numbers.remove(10)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[21], line 1
+----> 1 numbers.remove(10)
+
+ValueError: list.remove(x): x not in list
+
+In [22]: values[]
+  Cell In[22], line 1
+    values[]
+           ^
+SyntaxError: invalid syntax
+
+
+In [23]: values.pop()
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[23], line 1
+----> 1 values.pop()
+
+NameError: name 'values' is not defined
+
+In [24]: alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    ...: midpoint = len(alphabet) // 2
+    ...: first_half = alphabet[0:midpoint]
+    ...: print(first_half)
+abcdefghijklm
+
+In [25]: alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    ...: ending_index = len(alphabet) // 2
+    ...: first_half = alphabet[:ending_index]
+    ...: print(first_half)
+abcdefghijklm
+
+In [26]: alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    ...: midpoint = len(alphabet) // 2
+    ...: second_half = alphabet[midpoint:]
+    ...: print(second_half)
+nopqrstuvwxyz
+
+In [27]: alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    ...: ending_index = len(alphabet) // 2 x
+    ...: second_half = alphabet[ending_index:]
+    ...: print(second_half)
+  Cell In[27], line 2
+    ending_index = len(alphabet) // 2 x
+                                      ^
+SyntaxError: invalid syntax
+
+
+In [28]: alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    ...: ending_index = len(alphabet) // 2
+    ...: second_half = alphabet[ending_index:]
+    ...: print(second_half)
+nopqrstuvwxyz
+
+In [29]: alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    ...: every_second_letter = alphabet[::2]
+    ...: print(every_second_letter)
+acegikmoqsuwy
+
+In [30]: original_string = 'abcdefghijklmnopqrstuvwxyz'
+    ...: reversed_string = original_string[::-1]
+    ...: print(reversed_string)
+zyxwvutsrqponmlkjihgfedcba
+
+In [31]: alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    ...:
+    ...: # Reverse the string and take every third letter starting from 'z'
+    ...: every_third_letter_reverse = alphabet[::-1][::3]  # Reverse first, then take every third letter
+    ...: print(every_third_letter_reverse)  # Output: 'zwnslqj'
+    ...:
+zwtqnkheb
+
+In [32]: def unique_sorted_values(input_list):
+    ...:
+    ...:     unique_values = set(input_list)
+    ...:     sorted_values = sorted(unique_values)
+    ...:     return sorted_values
+    ...:
+
+In [33]: example_list = [3, 1, 2, 3, 5, 1, 4]
+    ...: result = unique_sorted_values(example_list)
+    ...: print(result)
+[1, 2, 3, 4, 5]
+
+In [34]: def is_palindrome(s):
+    ...:
+    ...:     stack = []
+    ...:
+    ...:
+    ...:     normalized_str = ''.join(char.lower() for char in s if char.isalnum())
+    ...:
+    ...:
+    ...:     for char in normalized_str:
+    ...:         stack.append(char)
+    ...:
+    ...:
+    ...:     for char in normalized_str:
+    ...:         if char != stack.pop():
+    ...:             return False
+    ...:
+    ...:     return True
+    ...:
+
+In [35]: test_string = "A man, a plan, a canal: Panama"
+
+In [36]:
+
+In [36]: def is_palindrome(s):
+    ...:
+    ...:     stack = []
+    ...:
+    ...:
+    ...:     normalized_str = ''.join(char.lower() for char in s if char.isalnum())
+    ...:
+    ...:
+    ...:     for char in normalized_str:
+    ...:         stack.append(char)
+    ...:
+    ...:
+    ...:     for char in normalized_str:
+    ...:         if char != stack.pop():
+    ...:             return False
+    ...:
+    ...:
+    ...:     return True
+    ...:
+
+In [37]: test_string = "A man, a plan, a canal: Panama"
+
+In [38]: print(is_palindrome(test_String))
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[38], line 1
+----> 1 print(is_palindrome(test_String))
+
+NameError: name 'test_String' is not defined
+
+In [39]: print)is_palindrome(test_string))
+  Cell In[39], line 1
+    print)is_palindrome(test_string))
+         ^
+SyntaxError: unmatched ')'
+
+
+In [40]: print(is_palindrome(test_string))
+True
+
+In [41]: test_string2="radar"
+
+In [42]: print(is_palindrome(test_string2))
+True
+
+In [43]:
+    ...:  [(x, x * 0.0254) for x in [69, 77, 54]]
+    ...:
+    ...: list(map(lambda x: (x, x * 0.0254), [69, 77, 54]))
+Out[43]: [(69, 1.7526), (77, 1.9558), (54, 1.3716)]
+
+In [44]: def summarize_letters(s):
+    ...:
+    ...:     frequency = {}
+    ...:
+    ...:
+    ...:     for char in s:
+    ...:         if char.isalpha():
+    ...:             char = char.lower()
+    ...:             if char in frequency:
+    ...:                 frequency[char] += 1
+    ...:             else:
+    ...:                 frequency[char] = 1
+    ...:
+    ...:
+    ...:     frequency_list = [(letter, count) for letter, count in frequency.items()]
+    ...:     return frequency_list
+    ...:
+
+In [45]: test_string = "All who wander are not lost."
+    ...: result = summarize_letters(test_string)
+    ...: print(result)
+[('a', 3), ('l', 3), ('w', 2), ('h', 1), ('o', 3), ('n', 2), ('d', 1), ('e', 2), ('r', 2), ('t', 2), ('s', 1)]
+
+In [46]: alphabet = {chr(i) for i in range(ord('a'), ord('z') + 1)}
+    ...:
+    ...: has_all_letters = alphabet.issubset(set(input_string.lower()))
+    ...:
+    ...:
+    ...: print("The string has all the letters of the alphabet:", has_all_letters)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[46], line 3
+      1 alphabet = {chr(i) for i in range(ord('a'), ord('z') + 1)}
+----> 3 has_all_letters = alphabet.issubset(set(input_string.lower()))
+      6 print("The string has all the letters of the alphabet:", has_all_letters)
+
+NameError: name 'input_string' is not defined
+
+In [47]: alphabet = {chr(i) for i in range(ord('a'), ord('z') + 1)}
+    ...:
+    ...: has_all_letters = alphabet.issubset(set(test_string.lower()))
+    ...:
+    ...:
+    ...: print("The string has all the letters of the alphabet:", has_all_letters)
+The string has all the letters of the alphabet: False
+
+    ...:     phone_mapping = {
+    ...:         'A': '2', 'B': '2', 'C': '2',
+    ...:         'D': '3', 'E': '3', 'F': '3',
+    ...:         'G': '4', 'H': '4', 'I': '4',
+    ...:         'J': '5', 'K': '5', 'L': '5',
+    ...:         'M': '6', 'N': '6', 'O': '6',
+    ...:         'P': '7', 'Q': '7', 'R': '7', 'S': '7',
+    ...:         'T': '8', 'U': '8', 'V': '8',
+    ...:         'W': '9', 'X': '9', 'Y': '9', 'Z': '9'
+    ...:     }
+    ...:
+    ...:
+    ...:     digit_strings = [phone_mapping[letter.upper()] for letter in letters]
+    ...:
+    ...:
+    ...:     def generate_combinations(prefix, remaining):
+    ...:         if not remaining:
+    ...:             phone_numbers.append(prefix)
+    ...:             return
+    ...:
+    ...:         current_digit = remaining[0]
+    ...:         for number in current_digit:
+    ...:             generate_combinations(prefix + number, remaining[1:])
+    ...:
+    ...:
+    ...:     phone_numbers = []
+    ...:     generate_combinations('', digit_strings)
+    ...:
+    ...:     return phone_numbers
+    ...:
+
+    ...:     }
+    ...:
+    ...:
+    ...:     digit_strings = [phone_mapping[letter.upper()] for letter in letters]
+    ...:
+    ...:
+    ...:     def generate_combinations(prefix, remaining):
+    ...:         if not remaining:
+    ...:             phone_numbers.append(prefix)
+    ...:             return
+    ...:
+    ...:         current_digit = remaining[0]
+    ...:         for number in current_digit:
+    ...:             generate_combinations(prefix + number, remaining[1:])
+    ...:
+    ...:
+    ...:     phone_numbers = []
+    ...:     generate_combinations('', digit_strings)
+    ...:
+    ...:     return phone_numbers
+    ...:
+    ...: input_string = input("Please enter a seven-letter string: ")
+    ...:
+    ...: if len(input_string) == 7 and input_string.isalpha():
+    ...:     phone_numbers = letters_to_phone_number(input_string)
+    ...:     print(f"Possible phone numbers for '{input_string}':")
+    ...:     print(phone_numbers)
+    ...: else:
+    ...:     print("Invalid input! Please provide a valid seven-letter string.")
+    ...:
+Please enter a seven-letter string: ilovedogs
+Invalid input! Please provide a valid seven-letter string.
+
+In [50]: ilovedog
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[50], line 1
+----> 1 ilovedog
+
+NameError: name 'ilovedog' is not defined
+
+    ...:     }
+    ...:
+    ...:
+    ...:     digit_strings = [phone_mapping[letter.upper()] for letter in letters]
+    ...:
+    ...:
+    ...:     def generate_combinations(prefix, remaining):
+    ...:         if not remaining:
+    ...:             phone_numbers.append(prefix)
+    ...:             return
+    ...:
+    ...:         current_digit = remaining[0]
+    ...:         for number in current_digit:
+    ...:             generate_combinations(prefix + number, remaining[1:])
+    ...:
+    ...:
+    ...:     phone_numbers = []
+    ...:     generate_combinations('', digit_strings)
+    ...:
+    ...:     return phone_numbers
+    ...:
+    ...: input_string = input("Please enter a seven-letter string: ")
+    ...:
+    ...: if len(input_string) == 7 and input_string.isalpha():
+    ...:     phone_numbers = letters_to_phone_number(input_string)
+    ...:     print(f"Possible phone numbers for '{input_string}':")
+    ...:     print(phone_numbers)
+    ...: else:
+    ...:     print("Invalid input! Please provide a valid seven-letter string.")
+    ...:
+Please enter a seven-letter string: hellohi
+Possible phone numbers for 'hellohi':
+['4355644']
+
+In [52]: # Define the hardware store data using tuples
+    ...: hardware_data = [
+    ...:     ("83", "Electric sander", 7, 57.98),
+    ...:     ("24", "Power saw", 18, 99.99),
+    ...:     ("7", "Sledge hammer", 11, 21.50),
+    ...:     ("77", "Hammer", 76, 11.99),
+    ...:     ("39", "Jig saw", 3, 79.50)
+    ...: ]
+    ...:
+    ...: # Print the headers
+    ...: print(f"{'Part ID':<10} {'Description':<20} {'Quantity':<10} {'Price':<10}")
+    ...: print("-" * 50)
+    ...:
+    ...: # Print each item in the hardware data
+    ...: for item in hardware_data:
+    ...:     part_id, description, quantity, price = item
+    ...:     print(f"{part_id:<10} {description:<20} {quantity:<10} {price:<10.2f}")
+    ...:
+Part ID    Description          Quantity   Price
+--------------------------------------------------
+83         Electric sander      7          57.98
+24         Power saw            18         99.99
+7          Sledge hammer        11         21.50
+77         Hammer               76         11.99
+39         Jig saw              3          79.50
+
+In [53]: # Import itemgetter from the operator module
+    ...: from operator import itemgetter
+    ...:
+    ...: # Define the hardware store data using tuples
+    ...: hardware_data = [
+    ...:     ("83", "Electric sander", 7, 57.98),
+    ...:     ("24", "Power saw", 18, 99.99),
+    ...:     ("7", "Sledge hammer", 11, 21.50),
+    ...:     ("77", "Hammer", 76, 11.99),
+    ...:     ("39", "Jig saw", 3, 79.50)
+    ...: ]
+    ...:
+    ...: # Sort the hardware data by part description (the second element of each tuple)
+    ...: sorted_hardware_data = sorted(hardware_data, key=itemgetter(1))
+    ...:
+    ...: # Print the headers
+    ...: print(f"{'Part ID':<10} {'Description':<20} {'Quantity':<10} {'Price':<10}")
+    ...: print("-" * 50)
+    ...:
+    ...: # Print each item in the sorted hardware data
+    ...: for item in sorted_hardware_data:
+    ...:     part_id, description, quantity, price = item
+    ...:     print(f"{part_id:<10} {description:<20} {quantity:<10} {price:<10.2f}")
+    ...:
+Part ID    Description          Quantity   Price
+--------------------------------------------------
+83         Electric sander      7          57.98
+77         Hammer               76         11.99
+39         Jig saw              3          79.50
+24         Power saw            18         99.99
+7          Sledge hammer        11         21.50
+
+In [54]: sorted_by_price = sorted(hardware_data, key=itemgetter(3))
+    ...:
+    ...:
+    ...: print(f"{'Part ID':<10} {'Description':<20} {'Quantity':<10} {'Price':<10}")
+    ...: print("-" * 50)
+    ...:
+    ...: for item in sorted_by_price:
+    ...:     part_id, description, quantity, price = item
+    ...:     print(f"{part_id:<10} {description:<20} {quantity:<10} {price:<10.2f}")
+    ...:
+Part ID    Description          Quantity   Price
+--------------------------------------------------
+77         Hammer               76         11.99
+7          Sledge hammer        11         21.50
+83         Electric sander      7          57.98
+39         Jig saw              3          79.50
+24         Power saw            18         99.99
+
+In [55]: mapped_data = map(lambda item: (item[1], item[2]), hardware_data)
+    ...:
+    ...:
+    ...: mapped_list = list(mapped_data)
+    ...:
+    ...: sorted_by_quantity = sorted(mapped_list, key=itemgetter(1))
+    ...:
+    ...: print(f"{'Description':<20} {'Quantity':<10}")
+    ...: print("-" * 30)
+    ...:
+    ...: for description, quantity in sorted_by_quantity:
+    ...:     print(f"{description:<20} {quantity:<10}")
+    ...:
+Description          Quantity
+------------------------------
+Jig saw              3
+Electric sander      7
+Sledge hammer        11
+Power saw            18
+Hammer               76
+
+In [56]: mapped_data = map(lambda item: (item[1], item[2] * item[3]), hardware_data)
+    ...:
+    ...:
+    ...: mapped_list = list(mapped_data)
+    ...:
+    ...:
+    ...: sorted_by_invoice_value = sorted(mapped_list, key=itemgetter(1))
+    ...:
+    ...:
+    ...: print(f"{'Description':<20} {'Invoice Value':<15}")
+    ...: print("-" * 35)
+    ...:
+    ...:
+    ...: for description, invoice_value in sorted_by_invoice_value:
+    ...:     print(f"{description:<20} {invoice_value:<15.2f}")
+    ...:
+Description          Invoice Value
+-----------------------------------
+Sledge hammer        236.50
+Jig saw              238.50
+Electric sander      405.86
+Hammer               911.24
+Power saw            1799.82
+
+In [57]: mapped_data = map(lambda item: (item[1], item[2] * item[3]), hardware_data)
+    ...:
+    ...:
+    ...: filtered_data = filter(lambda x: 200 <= x[1] <= 500, mapped_data)
+    ...:
+    ...:
+    ...: filtered_list = list(filtered_data)
+    ...:
+    ...:
+    ...: sorted_by_invoice_value = sorted(filtered_list, key=itemgetter(1))
+    ...:
+    ...:
+    ...: print(f"{'Description':<20} {'Invoice Value':<15}")
+    ...: print("-" * 35)
+    ...:
+    ...:
+    ...: for description, invoice_value in sorted_by_invoice_value:
+    ...:     print(f"{description:<20} {invoice_value:<15.2f}")
+    ...:
+Description          Invoice Value
+-----------------------------------
+Sledge hammer        236.50
+Jig saw              238.50
+Electric sander      405.86
+
+In [58]: mapped_data = map(lambda item: (item[1], item[2] * item[3]), hardware_data)
+    ...:
+    ...: mapped_list = list(mapped_data)
+    ...:
+    ...:
+    ...: total_invoice_value = sum(invoice_value for _, invoice_value in mapped_list)
+    ...:
+    ...:
+    ...: print(f"{'Description':<20} {'Invoice Value':<15}")
+    ...: print("-" * 35)
+    ...:
+    ...:
+    ...: for description, invoice_value in mapped_list:
+    ...:     print(f"{description:<20} {invoice_value:<15.2f}")
+    ...:
+    ...:
+    ...: print("-" * 35)
+    ...: print(f"{'Total':<20} {total_invoice_value:<15.2f}")
+    ...:
+Description          Invoice Value
+-----------------------------------
+Electric sander      405.86
+Power saw            1799.82
+Sledge hammer        236.50
+Hammer               911.24
+Jig saw              238.50
+-----------------------------------
+Total                3591.92
+
+In [59]: numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+    ...: list(map(lambda x: x ** 2,
+    ...:  filter(lambda x: x % 2 != 0, numbers)))
+    ...:
+Out[59]: [9, 49, 1, 81, 25]
+
+In [60]: numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+    ...: list(filter(lambda x: x % 2 != 0, map(lambda x: x ** 2, numbers)))
+    ...:
+Out[60]: [9, 49, 1, 81, 25]
+
+In [61]: names_list = [
+    ...:     ("Walter", "White"),
+    ...:     ("Jesse", "Pinkman"),
+    ...:     ("Saul", "Goodman"),
+    ...:     ("Hank", "Schrader"),
+    ...:     ("Skyler", "White"),
+    ...:     ("Gus", "Fring"),
+    ...:     ("Mike", "Ehrmantraut"),
+    ...:     ("Jane", "Margolis"),
+    ...:     ("Betsy", "Jones"),
+    ...:     ("Frank", "Jones"),
+    ...:     ("Tom", "Jones"),
+    ...:     ("Lisa", "Jones"),
+    ...:     ("Chris", "Jones")
+    ...: ]
+    ...:
+    ...:
+    ...: jones_names = list(filter(lambda name: name[1] == "Jones", names_list))
+    ...:
+    ...:
+    ...: print("Tuples with last name 'Jones':")
+    ...: for first_name, last_name in jones_names:
+    ...:     print(f"{first_name} {last_name}")
+    ...:
+Tuples with last name 'Jones':
+Betsy Jones
+Frank Jones
+Tom Jones
+Lisa Jones
+Chris Jones
+
+In [62]: import random
+    ...:
+    ...: def get_feedback(is_correct):
+    ...:
+    ...:     correct_responses = ['Very good!', 'Nice work!', 'Keep up the good work!']
+    ...:     incorrect_responses = ['No. Please try again.', 'Wrong. Try once more.', 'No. Keep trying.']
+    ...:
+    ...:     if is_correct:
+    ...:
+    ...:         index = random.randint(0, len(correct_responses) - 1)
+    ...:         return correct_responses[index]
+    ...:     else:
+    ...:
+    ...:         index = random.randint(0, len(incorrect_responses) - 1)
+    ...:         return incorrect_responses[index]
+    ...:
+
+In [63]: numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+    ...: result = list(map(lambda x: x * 2, filter(lambda x: x % 2 == 0, numbers)))
+    ...:
+
+In [64]: numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+    ...: result = list(filter(lambda x: x % 2 == 0, map(lambda x: x * 2, numbers)))
+
+In [65]:  numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+    ...:     ...: result = list(map(lambda x: x * 2, filter(lambda x: x % 2 == 0, numbers)))
+
+In [66]:  numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+    ...:  result = list(map(lambda x: x * 2, filter(lambda x: x % 2 == 0, numbers)))
+
+In [67]: import numpy as np
+    ...:
+    ...:
+    ...: random_values = [np.random.randint(1, 11) for _ in range(50)]
+    ...:
+    ...:
+    ...: unique_values, counts = np.unique(random_values, return_counts=True)
+    ...:
+    ...:
+    ...: for value, count in zip(unique_values, counts):
+    ...:     print(f'Value: {value}, Frequency: {count}')
+    ...:
+Value: 1, Frequency: 7
+Value: 2, Frequency: 5
+Value: 3, Frequency: 4
+Value: 4, Frequency: 4
+Value: 5, Frequency: 4
+Value: 6, Frequency: 6
+Value: 7, Frequency: 6
+Value: 8, Frequency: 2
+Value: 9, Frequency: 4
+Value: 10, Frequency: 8
+
+In [68]: # List of responses from the survey
+    ...: responses = [1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 5]
+    ...:
+
+    ...: import numpy as np
+    ...: import random
+    ...: import seaborn as sns
+    ...:
+    ...: responses = [1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 5]
+    ...:
+    ...:
+    ...: unique_values, frequencies = np.unique(responses, return_counts=True)
+    ...:
+    ...: title = f'Survey Responses: {len(responses)} Total Responses'
+    ...:
+    ...: sns.set_style('whitegrid')
+    ...:
+    ...: axes = sns.barplot(x=unique_values, y=frequencies, palette='bright')
+    ...:
+    ...: axes.set_title(title)
+    ...: axes.set(xlabel='Response Value (1-5)', ylabel='Frequency')
+    ...:
+    ...: axes.set_ylim(top=max(frequencies) * 1.10)
+    ...:
+    ...:
+    ...: for bar, frequency in zip(axes.patches, frequencies):
+    ...:     text_x = bar.get_x() + bar.get_width() / 2.0
+    ...:     text_y = bar.get_height()
+    ...:     percentage = frequency / len(responses) * 100
+    ...:     text = f'{frequency} ({percentage:.1f}%)'
+    ...:     axes.text(text_x, text_y, text, fontsize=11, ha='center', va='bottom')
+    ...:
+    ...:
+    ...: plt.show()
+<ipython-input-69-27889c4948ae>:15: FutureWarning:
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  axes = sns.barplot(x=unique_values, y=frequencies, palette='bright')
+
+In [70]:
+
+In [70]: import matplotlib.pyplot as plt
+    ...: import numpy as np
+    ...: import random
+    ...: import seaborn as sns
+    ...:
+    ...: flips = [random.choice([1, 2]) for _ in range(num_flips)]
+    ...: values, frequencies = np.unique(flips, return_counts=True)
+    ...: title = f'Coin Flips: {num_flips} Total Flips'
+    ...: sns.set_style('whitegrid')
+    ...: axes.set(xlabel='Coin Side (1 = Heads, 2 = Tails)', ylabel='Frequency')
+    ...: plt.show()
+    ...: return frequencies, num_flips
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[70], line 6
+      3 import random
+      4 import seaborn as sns
+----> 6 flips = [random.choice([1, 2]) for _ in range(num_flips)]
+      7 values, frequencies = np.unique(flips, return_counts=True)
+      8 title = f'Coin Flips: {num_flips} Total Flips'
+
+NameError: name 'num_flips' is not defined
+
+In [71]: import matplotlib.pyplot as plt
+    ...: import numpy as np
+    ...: import random
+    ...: import seaborn as sns
+    ...: def simulate_coin_flips(num_flips):
+    ...:     flips = [random.choice([1, 2]) for _ in range(num_flips)]
+    ...:     values, frequencies = np.unique(flips, return_counts=True)
+    ...:     title = f'Coin Flips: {num_flips} Total Flips'
+    ...:     sns.set_style('whitegrid')
+    ...:     axes.set(xlabel='Coin Side (1 = Heads, 2 = Tails)', ylabel='Frequency')
+    ...:     plt.show()
+    ...:     return frequencies, num_flips
+    ...:
+
+In [72]: simulate_coin_flips(200):
+    ...:
+  Cell In[72], line 1
+    simulate_coin_flips(200):
+                            ^
+SyntaxError: invalid syntax
+
+
+In [73]: simulate_coin_flips(200)
+Out[73]: (array([ 97, 103], dtype=int64), 200)
+
+In [74]: simulate_coin_flips(20000):
+    ...:
+  Cell In[74], line 1
+    simulate_coin_flips(20000):
+                              ^
+SyntaxError: invalid syntax
+
+
+In [75]: simulate_coin_flips(20000)
+Out[75]: (array([10073,  9927], dtype=int64), 20000)
+
+In [76]: simulate_coin_flips(200000)
+Out[76]: (array([100460,  99540], dtype=int64), 200000)
+
+    ...:
+    ...: def plot_results(wins, losses, num_games):
+    ...:     """Plot the results of the simulation using Seaborn."""
+    ...:     rolls = np.arange(1, len(wins) + 1)
+    ...:     total_results = np.array(wins) + np.array(losses)
+    ...:     win_percentages = np.array(wins) / total_results * 100
+    ...:     loss_percentages = np.array(losses) / total_results * 100
+    ...:
+    ...:     sns.set_style('whitegrid')
+    ...:     plt.figure(figsize=(10, 6))
+    ...:
+    ...:     plt.bar(rolls - 0.2, win_percentages, width=0.4, label='Win %', color='green')
+    ...:     plt.bar(rolls + 0.2, loss_percentages, width=0.4, label='Loss %', color='red')
+    ...:
+    ...:     plt.xlabel('Roll Number')
+    ...:     plt.ylabel('Percentage')
+    ...:     plt.title(f'Craps Simulation Results: {num_games:,} Games')
+    ...:     plt.legend()
+    ...:     plt.tight_layout()
+    ...:     plt.show()
+    ...:
+    ...: if __name__ == '__main__':
+    ...:     if len(sys.argv) != 2:
+    ...:         print("Usage: python craps_simulation.py <number_of_games>")
+    ...:         sys.exit(1)
+    ...:
+    ...:     num_games = int(sys.argv[1])
+    ...:     wins, losses = simulate_games(num_games)
+    ...:     plot_results(wins, losses, num_games)
+    ...:
+Usage: python craps_simulation.py <number_of_games>
+An exception has occurred, use %tb to see the full traceback.
+
+SystemExit: 1
+
+C:\Users\kimbe\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+
+    ...:
+    ...: def plot_results(wins, losses, num_games):
+    ...:     """Plot the results of the simulation using Seaborn."""
+    ...:     rolls = np.arange(1, len(wins) + 1)
+    ...:     total_results = np.array(wins) + np.array(losses)
+    ...:     win_percentages = np.array(wins) / total_results * 100
+    ...:     loss_percentages = np.array(losses) / total_results * 100
+    ...:
+    ...:     sns.set_style('whitegrid')
+    ...:     plt.figure(figsize=(10, 6))
+    ...:
+    ...:     plt.bar(rolls - 0.2, win_percentages, width=0.4, label='Win %', color='green')
+    ...:     plt.bar(rolls + 0.2, loss_percentages, width=0.4, label='Loss %', color='red')
+    ...:
+    ...:     plt.xlabel('Roll Number')
+    ...:     plt.ylabel('Percentage')
+    ...:     plt.title(f'Craps Simulation Results: {num_games:,} Games')
+    ...:     plt.legend()
+    ...:     plt.tight_layout()
+    ...:     plt.show()
+    ...:
+    ...: if __name__ == '__main__':
+    ...:     if len(sys.argv) != 2:
+    ...:         print("Usage: python craps_simulation.py <number_of_games>")
+    ...:         sys.exit(1)
+    ...:
+    ...:     num_games = int(sys.argv[1])
+    ...:     wins, losses = simulate_games(num_games)
+    ...:     plot_results(wins, losses, num_games)
+    ...:
+Usage: python craps_simulation.py <number_of_games>
+An exception has occurred, use %tb to see the full traceback.
+
+SystemExit: 1
+
+C:\Users\kimbe\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+
+    ...:
+    ...: def plot_results(wins, losses, num_games):
+    ...:     """Plot the results of the simulation using Seaborn."""
+    ...:     rolls = np.arange(1, len(wins) + 1)
+    ...:     total_results = np.array(wins) + np.array(losses)
+    ...:     win_percentages = np.array(wins) / total_results * 100
+    ...:     loss_percentages = np.array(losses) / total_results * 100
+    ...:
+    ...:     sns.set_style('whitegrid')
+    ...:     plt.figure(figsize=(10, 6))
+    ...:
+    ...:     plt.bar(rolls - 0.2, win_percentages, width=0.4, label='Win %', color='green')
+    ...:     plt.bar(rolls + 0.2, loss_percentages, width=0.4, label='Loss %', color='red')
+    ...:
+    ...:     plt.xlabel('Roll Number')
+    ...:     plt.ylabel('Percentage')
+    ...:     plt.title(f'Craps Simulation Results: {num_games:,} Games')
+    ...:     plt.legend()
+    ...:     plt.tight_layout()
+    ...:     plt.show()
+    ...:
+    ...: if __name__ == '__main__':
+    ...:     if len(sys.argv) != 2:
+    ...:         print("Usage: python craps_simulation.py <number_of_games>")
+    ...:         sys.exit(1)
+    ...:
+    ...:     num_games = int(sys.argv[1])
+    ...:     wins, losses = simulate_games(num_games)
+    ...:     plot_results(wins, losses, num_games)
+    ...:
+Usage: python craps_simulation.py <number_of_games>
+An exception has occurred, use %tb to see the full traceback.
+
+SystemExit: 1
+
+C:\Users\kimbe\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+
+In [80]: python craps_simulation.py 10000
+  Cell In[80], line 1
+    python craps_simulation.py 10000
+           ^
+SyntaxError: invalid syntax
+
+
+    ...:     rolls = np.arange(1, len(rolls_won) + 1)
+    ...:
+    ...:     # Plotting the bar graph
+    ...:     plt.figure(figsize=(10, 6))
+    ...:     sns.barplot(x=rolls, y=rolls_won, color='green', label='Wins')
+    ...:     sns.barplot(x=rolls, y=rolls_lost, color='red', label='Losses', alpha=0.6)
+    ...:
+    ...:     plt.title(f'Craps Game Results Over {sum(rolls_won) + sum(rolls_lost):,} Games')
+    ...:     plt.xlabel('Roll Number')
+    ...:     plt.ylabel('Number of Wins/Losses')
+    ...:     plt.legend()
+    ...:
+    ...:     # Display the graph
+    ...:     plt.show()
+    ...:
+    ...: # Main function to run the simulation
+    ...: def main():
+    ...:     if len(sys.argv) < 2:
+    ...:         print("Usage: python craps_simulation.py <number_of_games>")
+    ...:         sys.exit(1)
+    ...:
+    ...:     num_games = int(sys.argv[1])
+    ...:
+    ...:     rolls_won, rolls_lost = simulate_multiple_games(num_games)
+    ...:     plot_results(rolls_won, rolls_lost)
+    ...:
+    ...: # Call the main function when the script is executed
+    ...: if __name__ == '__main__':
+    ...:     main()
+    ...:
+Usage: python craps_simulation.py <number_of_games>
+An exception has occurred, use %tb to see the full traceback.
+
+SystemExit: 1
+
+C:\Users\kimbe\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+
+In [82]: import random
+    ...:
+    ...: def initialize_deck():
+    ...:     # Define the ranks and suits
+    ...:     ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+    ...:     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+    ...:
+    ...:     # Create the deck as a list of tuples (rank, suit)
+    ...:     deck = [(rank, suit) for suit in suits for rank in ranks]
+    ...:
+    ...:     # Shuffle the deck
+    ...:     random.shuffle(deck)
+    ...:
+    ...:     return deck
+    ...:
+    ...: def print_deck(deck):
+    ...:     # Print the deck in four columns
+    ...:     for i, card in enumerate(deck):
+    ...:         print(f'{card[0]} of {card[1]:<10}', end='\t')
+    ...:         if (i + 1) % 4 == 0:
+    ...:             print()  # Newline after every four cards
+    ...:
+    ...: # Initialize and shuffle the deck
+    ...: shuffled_deck = initialize_deck()
+    ...:
+    ...: # Print the shuffled deck in four columns
+    ...: print_deck(shuffled_deck)
+    ...:
+8 of Clubs      King of Spades          4 of Clubs      7 of Spades
+2 of Spades     9 of Spades     4 of Diamonds   10 of Hearts
+6 of Diamonds   7 of Hearts     8 of Hearts     9 of Hearts
+King of Hearts          Ace of Clubs            6 of Spades     4 of Spades
+Queen of Clubs          Ace of Hearts           10 of Diamonds          Jack of Clubs
+Jack of Diamonds        Jack of Spades          4 of Hearts     9 of Clubs
+3 of Hearts     2 of Hearts     Queen of Diamonds       5 of Spades
+King of Diamonds        8 of Spades     Ace of Spades           7 of Diamonds
+6 of Hearts     10 of Clubs             6 of Clubs      Ace of Diamonds
+3 of Diamonds   3 of Spades     2 of Clubs      3 of Clubs
+2 of Diamonds   5 of Clubs      8 of Diamonds   7 of Clubs
+9 of Diamonds   King of Clubs           Jack of Hearts          5 of Hearts
+Queen of Hearts         5 of Diamonds   10 of Spades            Queen of Spades
+
+    ...:     ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+    ...:     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+    ...:
+    ...:     # Create the deck as a list of tuples (rank, suit)
+    ...:     deck = [(rank, suit) for suit in suits for rank in ranks]
+    ...:
+    ...:     # Shuffle the deck
+    ...:     random.shuffle(deck)
+    ...:
+    ...:     return deck
+    ...:
+    ...: def deal_poker_hand(deck):
+    ...:     # Deal a 5-card poker hand
+    ...:     return deck[:5]
+    ...:
+    ...: def print_hand(hand):
+    ...:     # Print the 5-card hand
+    ...:     for card in hand:
+    ...:         print(f'{card[0]} of {card[1]}')
+    ...:
+    ...: # Initialize and shuffle the deck
+    ...: shuffled_deck = initialize_deck()
+    ...:
+    ...: # Deal a five-card poker hand
+    ...: poker_hand = deal_poker_hand(shuffled_deck)
+    ...:
+    ...: # Print the poker hand
+    ...: print("Your poker hand:")
+    ...: print_hand(poker_hand)
+    ...:
+Your poker hand:
+King of Hearts
+2 of Diamonds
+9 of Hearts
+10 of Spades
+5 of Clubs
+
+In [84]: def is_pair(hand):
+    ...:     rank_counts = get_rank_counts(hand)
+    ...:     return 2 in rank_counts.values()
+    ...:
+
+In [85]: is_pair(hand)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[85], line 1
+----> 1 is_pair(hand)
+
+NameError: name 'hand' is not defined
