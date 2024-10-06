@@ -1,0 +1,101 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]:
+
+In [1]: name = input("Enter your name: ")
+Enter your name: Kim
+
+In [2]: print("Hello, (name)!")
+Hello, (name)!
+
+In [3]: name = input("Enter your name: ")
+Enter your name:
+
+In [4]: name = input("Enter your name: ")
+Enter your name:
+
+In [5]: name = input("Enter your name: ")
+Enter your name:
+
+In [6]: name = input("Enter your name: ")
+   ...:
+   ...: print("Hello, {name}!")
+   ...:
+Enter your name: Kim
+Hello, {name}!
+
+In [7]: # Prompt the user for their name
+   ...: name = input("Please enter your name: ")
+   ...:
+   ...: # Display a welcome message
+   ...: print(f"Welcome, {name}!")
+   ...:
+Please enter your name: Kim
+Welcome, Kim!
+
+In [8]: name = input("Enter your name: ")
+   ...:
+   ...: print(f"Hello, {name}!")
+Enter your name: Kim
+Hello, Kim!
+
+In [9]: hours = float(input("Enter hours worked: "))
+   ...:
+   ...: rate = float(input("Enter rate per hour: "))
+   ...: gross_pay = hours * rate
+   ...:
+   ...: print(f"Gross pay: ${gross_pay:.2f}")
+Enter hours worked: 35
+Enter rate per hour: 2.75
+Gross pay: $96.25
+
+In [10]: width = 17
+    ...: height = 12.0
+    ...:
+
+In [11]: width//2
+Out[11]: 8
+
+In [12]: width/2.0
+Out[12]: 8.5
+
+In [13]: height/3
+Out[13]: 4.0
+
+In [14]: 1 + 2 \* 5
+  Cell In[14], line 1
+    1 + 2 \* 5
+           ^
+SyntaxError: unexpected character after line continuation character
+
+
+In [15]: 1 + 2*5
+Out[15]: 11
+
+In [16]: Celsius = float(input("Enter temperature in Celsius: "))
+    ...: Fahrenheit = (Celsius * 9/5) + 32
+    ...: print(f"The temperature in Fahrenheit is: {fahrenheit:.2f}")
+Enter temperature in Celsius: 0
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[16], line 3
+      1 Celsius = float(input("Enter temperature in Celsius: "))
+      2 Fahrenheit = (Celsius * 9/5) + 32
+----> 3 print(f"The temperature in Fahrenheit is: {fahrenheit:.2f}")
+
+NameError: name 'fahrenheit' is not defined
+
+In [17]: Celsius = float(input("Enter temperature in Celsius: "))
+    ...: Fahrenheit = (Celsius * 9/5) + 32
+    ...: print(f"The temperature in Fahrenheit is: {Fahrenheit:.2f}")
+Enter temperature in Celsius: 0
+The temperature in Fahrenheit is: 32.00
+
+In [18]: 5
+    ...: x = 5
+    ...: x + 1
+Out[18]: 6
