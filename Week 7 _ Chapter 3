@@ -1,0 +1,341 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: hours = float(input("Enter Hours: "))
+   ...: rate = float(input("Enter Rate: "))
+   ...:
+   ...: if hours > 40:
+   ...:     regular_pay = 40 * rate
+   ...:     overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:     pay = regular_pay + overtime_pay
+   ...: else:
+   ...:     pay = hours * rate
+   ...:
+   ...: print(f"Pay: ${pay}")
+Enter Hours: 45
+Enter Rate: 10
+Pay: $475.0
+
+In [2]: hours = float(input("Enter Hours: "))
+   ...: rate = float(input("Enter Rate: "))
+   ...:
+   ...: if hours > 40:
+   ...:     regular_pay = 40 * rate
+   ...:     overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:     pay = regular_pay + overtime_pay
+   ...: else:
+   ...:     pay = hours * rate
+   ...:
+   ...: print(f"Pay: ${pay}:.2f")
+Enter Hours: 45
+Enter Rate: 10
+Pay: $475.0:.2f
+
+In [3]: hours = float(input("Enter Hours: "))
+   ...: rate = float(input("Enter Rate: "))
+   ...:
+   ...: if hours > 40:
+   ...:     regular_pay = 40 * rate
+   ...:     overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:     pay = regular_pay + overtime_pay
+   ...: else:
+   ...:     pay = hours * rate
+   ...:
+   ...: print(f"Pay: ${pay}")
+   ...: hours = float(input("Enter Hours: "))
+   ...: rate = float(input("Enter Rate: "))
+   ...:
+   ...: if hours > 40:
+   ...:     regular_pay = 40 * rate
+   ...:     overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:     pay = regular_pay + overtime_pay
+   ...: else:
+   ...:     pay = hours * rate
+   ...:
+   ...: print(f"Pay: ${pay}:.2f")
+Enter Hours: 45
+Enter Rate: 10
+Pay: $475.0
+Enter Hours: hours = float(input("Enter Hours: "))
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[3], line 12
+      9     pay = hours * rate
+     11 print(f"Pay: ${pay}")
+---> 12 hours = float(input("Enter Hours: "))
+     13 rate = float(input("Enter Rate: "))
+     15 if hours > 40:
+
+ValueError: could not convert string to float: 'hours = float(input("Enter Hours: "))'
+
+In [4]: rate = float(input("Enter Rate: "))
+   ...:
+   ...: if hours > 40:
+   ...:     regular_pay = 40 * rate
+   ...:     overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:     pay = regular_pay + overtime_pay
+   ...: else:
+   ...:     pay = hours * rate
+   ...:
+   ...: print(f"Pay: ${pay:.2f}")
+Enter Rate:
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[4], line 1
+----> 1 rate = float(input("Enter Rate: "))
+      3 if hours > 40:
+      4     regular_pay = 40 * rate
+
+ValueError: could not convert string to float: ''
+
+In [5]:
+
+In [5]: hours = float(input("Enter Hours: "))
+   ...: rate = float(input("Enter Rate: "))
+   ...:
+   ...: if hours > 40:
+   ...:     regular_pay = 40 * rate
+   ...:     overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:     pay = regular_pay + overtime_pay
+   ...: else:
+   ...:     pay = hours * rate
+   ...:
+   ...: print(f"Pay: ${pay:.2f}")
+Enter Hours: 45
+Enter Rate: 10
+Pay: $475.00
+
+In [6]: try:
+   ...:
+   ...:     hours = float(input("Enter Hours: "))
+   ...:     rate = float(input("Enter Rate: "))
+   ...:
+   ...:     if hours > 40:
+   ...:         regular_pay = 40 * rate
+   ...:         overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:         pay = regular_pay + overtime_pay
+   ...:     else:
+   ...:         pay = hours * rate
+   ...:
+   ...:     print(f"Pay: {pay:.2f}")
+   ...:
+   ...: except ValueError:
+   ...:     print("Error, please enter numeric input.")
+   ...:
+Enter Hours: 20
+Enter Rate: nine
+Error, please enter numeric input.
+
+In [7]: try:
+   ...:
+   ...:     hours = float(input("Enter Hours: "))
+   ...:     rate = float(input("Enter Rate: "))
+   ...:
+   ...:     if hours > 40:
+   ...:         regular_pay = 40 * rate
+   ...:         overtime_pay = (hours - 40) * (rate * 1.5)
+   ...:         pay = regular_pay + overtime_pay
+   ...:     else:
+   ...:         pay = hours * rate
+   ...:
+   ...:     print(f"Pay: {pay:.2f}")
+   ...:
+   ...: except ValueError:
+   ...:     print("Error, please enter numeric input.")
+   ...:
+Enter Hours: forty
+Error, please enter numeric input.
+
+In [8]: try:
+   ...:
+   ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+   ...:
+   ...:     if score < 0.0 or score > 1.0:
+   ...:         print("Error: Score is out of range.")
+   ...:     else:
+   ...:
+   ...:         if score >= 0.9:
+   ...:             grade = 'A'
+   ...:         elif score >= 0.8:
+   ...:             grade = 'B'
+   ...:         elif score >= 0.7:
+   ...:             grade = 'C'
+   ...:         elif score >= 0.6:
+   ...:             grade = 'D'
+   ...:         else:
+   ...:             grade = 'F'
+   ...:
+   ...:         print(f"Grade: {grade}")
+   ...:
+   ...: except ValueError:
+   ...:     print("Error: Please enter a numeric value.")
+   ...:
+Enter a score between 0.0 and 1.0: .95
+Grade: A
+
+In [9]: try:
+   ...:
+   ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+   ...:
+   ...:     if score < 0.0 or score > 1.0:
+   ...:         print("Error: Score is out of range.")
+   ...:     else:
+   ...:
+   ...:         if score >= 0.9:
+   ...:             grade = 'A'
+   ...:         elif score >= 0.8:
+   ...:             grade = 'B'
+   ...:         elif score >= 0.7:
+   ...:             grade = 'C'
+   ...:         elif score >= 0.6:
+   ...:             grade = 'D'
+   ...:         else:
+   ...:             grade = 'F'
+   ...:
+   ...:         print(f"Grade: {grade}")
+   ...:
+   ...: except ValueError:
+   ...:     print("Error: Please enter a numeric value.")
+   ...:
+Enter a score between 0.0 and 1.0: 4
+Error: Score is out of range.
+
+In [10]: try:
+    ...:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         print("Error: Score is out of range.")
+    ...:     else:
+    ...:
+    ...:         if score >= 0.9:
+    ...:             grade = 'A'
+    ...:         elif score >= 0.8:
+    ...:             grade = 'B'
+    ...:         elif score >= 0.7:
+    ...:             grade = 'C'
+    ...:         elif score >= 0.6:
+    ...:             grade = 'D'
+    ...:         else:
+    ...:             grade = 'F'
+    ...:
+    ...:         print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Error: Please enter a numeric value.")
+    ...:
+Enter a score between 0.0 and 1.0: .5
+Grade: F
+
+In [11]: try:
+    ...:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         print("Error: Score is out of range.")
+    ...:     else:
+    ...:
+    ...:         if score >= 0.9:
+    ...:             grade = 'A'
+    ...:         elif score >= 0.8:
+    ...:             grade = 'B'
+    ...:         elif score >= 0.7:
+    ...:             grade = 'C'
+    ...:         elif score >= 0.6:
+    ...:             grade = 'D'
+    ...:         else:
+    ...:             grade = 'F'
+    ...:
+    ...:         print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Error: Please enter a numeric value.")
+    ...:
+Enter a score between 0.0 and 1.0: .7
+Grade: C
+
+In [12]: try:
+    ...:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         print("Error: Score is out of range.")
+    ...:     else:
+    ...:
+    ...:         if score >= 0.9:
+    ...:             grade = 'A'
+    ...:         elif score >= 0.8:
+    ...:             grade = 'B'
+    ...:         elif score >= 0.7:
+    ...:             grade = 'C'
+    ...:         elif score >= 0.6:
+    ...:             grade = 'D'
+    ...:         else:
+    ...:             grade = 'F'
+    ...:
+    ...:         print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Error: Please enter a numeric value.")
+    ...:
+Enter a score between 0.0 and 1.0: .8
+Grade: B
+
+In [13]: try:
+    ...:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         print("Error: Score is out of range.")
+    ...:     else:
+    ...:
+    ...:         if score >= 0.9:
+    ...:             grade = 'A'
+    ...:         elif score >= 0.8:
+    ...:             grade = 'B'
+    ...:         elif score >= 0.7:
+    ...:             grade = 'C'
+    ...:         elif score >= 0.6:
+    ...:             grade = 'D'
+    ...:         else:
+    ...:             grade = 'F'
+    ...:
+    ...:         print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Error: Please enter a numeric value.")
+    ...:
+Enter a score between 0.0 and 1.0: 10.0
+Error: Score is out of range.
+
+In [14]: try:
+    ...:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         print("Error: Score is out of range.")
+    ...:     else:
+    ...:
+    ...:         if score >= 0.9:
+    ...:             grade = 'A'
+    ...:         elif score >= 0.8:
+    ...:             grade = 'B'
+    ...:         elif score >= 0.7:
+    ...:             grade = 'C'
+    ...:         elif score >= 0.6:
+    ...:             grade = 'D'
+    ...:         else:
+    ...:             grade = 'F'
+    ...:
+    ...:         print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Error: Please enter a numeric value.")
+    ...:
+Enter a score between 0.0 and 1.0: perfect
+Error: Please enter a numeric value.
+
+In [15]:
