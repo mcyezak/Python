@@ -1,0 +1,347 @@
+
+(base) C:\Users\kimbe>iPython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import random
+   ...:
+   ...: for i in range(10):
+   ...:     x = random.random()
+   ...:     print(x)
+   ...:
+0.06539843907127241
+0.7025730267114648
+0.20602338215068272
+0.5362568844477177
+0.00811498778410158
+0.5787946870526796
+0.2629474885544817
+0.06550057692550415
+0.16349525569708212
+0.683543821035303
+
+In [2]: import random
+   ...:
+   ...: for i in range(10):
+   ...:     x = random.random()
+   ...:     print(x)
+   ...:
+0.7585654837302721
+0.24739680802934827
+0.42792937109803364
+0.9157196583997386
+0.4243501716829672
+0.8021960118789289
+0.7774476681589327
+0.26851874916050444
+0.3995786617012722
+0.6986463916433555
+
+In [3]: def print_lyrics():
+   ...:     print("I'm a lumberjack, and I'm okay.")
+   ...:     print('I sleep all night and I work all day.')
+   ...:
+   ...:
+   ...: def repeat_lyrics():
+   ...:     print_lyrics()
+   ...:     print_lyrics()
+   ...:
+   ...: repeat_lyrics()
+   ...:
+   ...: # Code: http://www.py4e.com/code3/lyrics.py
+   ...: # Or select Download from this trinket's left-hand menu
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+
+In [4]: def print_lyrics():
+   ...:     print("I'm a lumberjack, and I'm okay.")
+   ...:     print('I sleep all night and I work all day.')
+   ...:
+   ...:
+   ...: def repeat_lyrics():
+   ...:     print_lyrics()
+   ...:     print_lyrics()
+   ...:
+   ...: repeat_lyrics()
+   ...:
+   ...: # Code: http://www.py4e.com/code3/lyrics.py# Or select Download from this trinket's left-hand menu
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+
+In [5]: repeat_lyrics()
+   ...: def repeat_lyrics():
+   ...:     print_lyrics()
+   ...:     print_lyrics()
+   ...:
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+
+In [6]: repeat_lyrics()
+   ...:
+   ...: def print_lyrics():
+   ...:     print("I'm a lumberjack, and I'm okay.")
+   ...:     print('I sleep all night and I work all day.')
+   ...:
+   ...: def repeat_lyrics():
+   ...:     print_lyrics()
+   ...:     print_lyrics()
+   ...:
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+
+In [7]: def repeat_lyrics():
+   ...:     print_lyrics()
+   ...:     print_lyrics()
+   ...:
+   ...: def print_lyrics():
+   ...:     print("I'm a lumberjack, and I'm okay.")
+   ...:     print('I sleep all night and I work all day.')
+   ...:
+
+In [8]:  def repeat_lyrics():
+   ...:     print_lyrics()
+   ...:     print_lyrics()
+   ...:
+   ...: def print_lyrics():
+   ...:     print("I'm a lumberjack, and I'm okay.")
+   ...:     print('I sleep all night and I work all day.')
+   ...:
+   ...: repeat_lyrics()
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+I'm a lumberjack, and I'm okay.
+I sleep all night and I work all day.
+
+In [9]: def fred():
+   ...:    print("Zap")
+   ...:
+   ...: def jane():
+   ...:    print("ABC")
+   ...:
+   ...: jane()
+   ...: fred()
+   ...: jane()
+ABC
+Zap
+ABC
+
+In [10]: def computepay(hours, rate):
+    ...:     if hours > 40:
+    ...:
+    ...:         overtime_hours = hours - 40
+    ...:         regular_pay = 40 * rate
+    ...:         overtime_pay = overtime_hours * rate * 1.5
+    ...:         total_pay = regular_pay + overtime_pay
+    ...:     else:
+    ...:         # Calculate regular pay
+    ...:         total_pay = hours * rate
+    ...:
+    ...:     return total_pay
+    ...:
+    ...:
+    ...: hours = float(input("Enter Hours: "))
+    ...: rate = float(input("Enter Rate: "))
+    ...:
+    ...: pay = computepay(hours, rate)
+    ...: print("Pay:", pay)
+Enter Hours:
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[10], line 15
+     10         total_pay = hours * rate
+     12     return total_pay
+---> 15 hours = float(input("Enter Hours: "))
+     16 rate = float(input("Enter Rate: "))
+     18 pay = computepay(hours, rate)
+
+ValueError: could not convert string to float: ''
+
+In [11]: def computepay(hours, rate):
+    ...:     if hours > 40:
+    ...:
+    ...:         overtime_hours = hours - 40
+    ...:         regular_pay = 40 * rate
+    ...:         overtime_pay = overtime_hours * rate * 1.5
+    ...:         total_pay = regular_pay + overtime_pay
+    ...:     else:
+    ...:         # Calculate regular pay
+    ...:         total_pay = hours * rate
+    ...:
+    ...:     return total_pay
+    ...:
+    ...:
+    ...: hours = float(input("Enter Hours: "))
+    ...: rate = float(input("Enter Rate: "))
+    ...:
+    ...: pay = computepay(hours, rate)
+    ...: print("Pay:", pay)
+Enter Hours: 45
+Enter Rate: 10
+Pay: 475.0
+
+In [12]: def computegrade(score):
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         return "Error: Score is out of range."
+    ...:     elif score >= 0.9:
+    ...:         return 'A'
+    ...:     elif score >= 0.8:
+    ...:         return 'B'
+    ...:     elif score >= 0.7:
+    ...:         return 'C'
+    ...:     elif score >= 0.6:
+    ...:         return 'D'
+    ...:     else:
+    ...:         return 'F'
+    ...:
+    ...: try:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:     grade = computegrade(score)
+    ...:     print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Bad score")
+    ...:
+Enter a score between 0.0 and 1.0: 0.95
+Grade: A
+
+In [13]: def computegrade(score):
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         return "Error: Score is out of range."
+    ...:     elif score >= 0.9:
+    ...:         return 'A'
+    ...:     elif score >= 0.8:
+    ...:         return 'B'
+    ...:     elif score >= 0.7:
+    ...:         return 'C'
+    ...:     elif score >= 0.6:
+    ...:         return 'D'
+    ...:     else:
+    ...:         return 'F'
+    ...:
+    ...: try:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:     grade = computegrade(score)
+    ...:     print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Bad score")
+    ...:
+Enter a score between 0.0 and 1.0: perfect
+Bad score
+
+In [14]: def computegrade(score):
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         return "Error: Score is out of range."
+    ...:     elif score >= 0.9:
+    ...:         return 'A'
+    ...:     elif score >= 0.8:
+    ...:         return 'B'
+    ...:     elif score >= 0.7:
+    ...:         return 'C'
+    ...:     elif score >= 0.6:
+    ...:         return 'D'
+    ...:     else:
+    ...:         return 'F'
+    ...:
+    ...: try:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:     grade = computegrade(score)
+    ...:     print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Bad score")
+    ...:
+Enter a score between 0.0 and 1.0: 10.0
+Grade: Error: Score is out of range.
+
+In [15]: def computegrade(score):
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         return "Bad score"
+    ...:     elif score >= 0.9:
+    ...:         return 'A'
+    ...:     elif score >= 0.8:
+    ...:         return 'B'
+    ...:     elif score >= 0.7:
+    ...:         return 'C'
+    ...:     elif score >= 0.6:
+    ...:         return 'D'
+    ...:     else:
+    ...:         return 'F'
+    ...:
+    ...: try:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:     grade = computegrade(score)
+    ...:     print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Bad score")
+    ...:
+Enter a score between 0.0 and 1.0: 10.0
+Grade: Bad score
+
+In [16]: def computegrade(score):
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         return "Bad score"
+    ...:     elif score >= 0.9:
+    ...:         return 'A'
+    ...:     elif score >= 0.8:
+    ...:         return 'B'
+    ...:     elif score >= 0.7:
+    ...:         return 'C'
+    ...:     elif score >= 0.6:
+    ...:         return 'D'
+    ...:     else:
+    ...:         return 'F'
+    ...:
+    ...: try:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:     grade = computegrade(score)
+    ...:     print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Bad score")
+    ...:
+Enter a score between 0.0 and 1.0: 0.75
+Grade: C
+
+In [17]: def computegrade(score):
+    ...:
+    ...:     if score < 0.0 or score > 1.0:
+    ...:         return "Bad score"
+    ...:     elif score >= 0.9:
+    ...:         return 'A'
+    ...:     elif score >= 0.8:
+    ...:         return 'B'
+    ...:     elif score >= 0.7:
+    ...:         return 'C'
+    ...:     elif score >= 0.6:
+    ...:         return 'D'
+    ...:     else:
+    ...:         return 'F'
+    ...:
+    ...: try:
+    ...:     score = float(input("Enter a score between 0.0 and 1.0: "))
+    ...:     grade = computegrade(score)
+    ...:     print(f"Grade: {grade}")
+    ...:
+    ...: except ValueError:
+    ...:     print("Bad score")
+    ...:
+Enter a score between 0.0 and 1.0: 0.5
+Grade: F
+
+In [18]:
