@@ -1,0 +1,98 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]:
+
+In [1]: n = 5
+   ...: while n > 0:
+   ...:     print(n)
+   ...:     n = n - 1
+   ...: print('Blastoff!')
+5
+4
+3
+2
+1
+Blastoff!
+
+In [2]: friends = ['Joseph', 'Glenn', 'Sally']
+   ...: for friend in friends:
+   ...:     print('Happy New Year:', friend)
+   ...: print('Done!')
+Happy New Year: Joseph
+Happy New Year: Glenn
+Happy New Year: Sally
+Done!
+
+In [3]: count = 0
+   ...: for itervar in [3, 41, 12, 9, 74, 15]:
+   ...:     count = count + 1
+   ...: print('Count: ', count)
+Count:  6
+
+In [4]: total = 0
+   ...: for itervar in [3, 41, 12, 9, 74, 15]:
+   ...:     total = total + itervar
+   ...: print('Total: ', total)
+Total:  154
+
+In [5]: total = 0
+   ...: count = 0
+   ...:
+   ...: while True:
+   ...:     user_input = input("Enter a number (or 'done' to finish): ")
+   ...:
+   ...:     if user_input.lower() == "done":
+   ...:         break
+   ...:
+   ...:     try:
+   ...:         number = float(user_input)
+   ...:         total += number
+   ...:         count += 1
+   ...:     except ValueError:
+   ...:         print("Invalid input")
+   ...:
+   ...: if count > 0:
+   ...:     average = total / count
+   ...:     print(f"Total: {total}, Count: {count}, Average: {average}")
+   ...: else:
+   ...:     print("No numbers were entered.")
+   ...:
+Enter a number (or 'done' to finish): 4
+Enter a number (or 'done' to finish): 5
+Enter a number (or 'done' to finish): bad data
+Invalid input
+Enter a number (or 'done' to finish): 7
+Enter a number (or 'done' to finish): done
+Total: 16.0, Count: 3, Average: 5.333333333333333
+
+In [6]: numbers = []
+   ...:
+   ...: while True:
+   ...:     user_input = input("Enter a number (or 'done' to finish): ")
+   ...:
+   ...:     if user_input.lower() == "done":
+   ...:         break
+   ...:
+   ...:     try:
+   ...:         number = float(user_input)
+   ...:         numbers.append(number)
+   ...:     except ValueError:
+   ...:         print("Invalid input")
+   ...:
+   ...: if numbers:
+   ...:     maximum = max(numbers)
+   ...:     minimum = min(numbers)
+   ...:     print(f"Maximum: {maximum}, Minimum: {minimum}")
+   ...: else:
+   ...:     print("No numbers were entered.")
+   ...:
+Enter a number (or 'done' to finish): 10
+Enter a number (or 'done' to finish): 20
+Enter a number (or 'done' to finish): 40
+Enter a number (or 'done' to finish): 50
+Enter a number (or 'done' to finish): done
+Maximum: 50.0, Minimum: 10.0
