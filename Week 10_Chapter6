@@ -1,0 +1,258 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]:
+
+In [1]: index = 0
+   ...: while index < len(fruit):
+   ...:     letter = fruit[index]
+   ...:     print(letter)
+   ...:     index = index + 1
+   ...:
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[1], line 2
+      1 index = 0
+----> 2 while index < len(fruit):
+      3     letter = fruit[index]
+      4     print(letter)
+
+NameError: name 'fruit' is not defined
+
+In [2]:
+
+In [2]: fruit = 'banana'
+
+In [3]: index = 0
+   ...: while index < len(fruit):
+   ...:     letter = fruit[index]
+   ...:     print(letter)
+   ...:     index = index + 1
+   ...:
+b
+a
+n
+a
+n
+a
+
+In [4]: fruit = 'banana'
+   ...: index= 0
+   ...: while index = len(fruit)- 1:
+   ...:     letter = fruit[index]
+   ...:     print(letter)
+   ...:     index -= 1
+  Cell In[4], line 3
+    while index = len(fruit)- 1:
+          ^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
+
+In [5]: fruit = 'banana'
+   ...: index= 0
+   ...: while index = len(fruit) - 1:
+   ...:     letter = fruit[index]
+   ...:     print(letter)
+   ...:     index -= 1
+  Cell In[5], line 3
+    while index = len(fruit) - 1:
+          ^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
+
+In [6]: fruit = 'banana'
+   ...: index= 0
+   ...: while index == len(fruit)- 1:
+   ...:     letter = fruit[index]
+   ...:     print(letter)
+   ...:     index -= 1
+   ...:
+
+In [7]: fruit = 'banana'
+   ...: index = len(text) - 1
+   ...:
+   ...: while index >= 0:
+   ...:     print(fruit[index])
+   ...:     index -= 1
+   ...:
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[7], line 2
+      1 fruit = 'banana'
+----> 2 index = len(text) - 1
+      4 while index >= 0:
+      5     print(fruit[index])
+
+NameError: name 'text' is not defined
+
+In [8]: fruit = 'banana'
+   ...: index = len(fruit) - 1
+   ...:
+   ...: while index >= 0:
+   ...:     print(fruit[index])
+   ...:     index -= 1
+   ...:
+a
+n
+a
+n
+a
+b
+
+In [9]: fruit[:]
+Out[9]: 'banana'
+
+In [10]: word = 'banana'
+    ...: count = 0
+    ...: for letter in word:
+    ...:     if letter == 'a':
+    ...:         count = count + 1
+    ...: print(count)
+3
+
+In [11]: def count(word, letter):
+    ...:     count = 0
+    ...:     for char in word:
+    ...:         if char == letter:
+    ...:             count += 1
+    ...:     return count
+    ...:
+
+In [12]: count(banana)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[12], line 1
+----> 1 count(banana)
+
+NameError: name 'banana' is not defined
+
+In [13]: count('banana')
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[13], line 1
+----> 1 count('banana')
+
+TypeError: count() missing 1 required positional argument: 'letter'
+
+In [14]: count('banana','b')
+Out[14]: 1
+
+In [15]: str.count(sub[, start[, end]])
+  Cell In[15], line 1
+    str.count(sub[, start[, end]])
+                  ^
+SyntaxError: invalid syntax
+
+
+In [16]: word = 'banana'
+    ...: count_of_a = word.count('a', 1, 5)
+    ...: print(count_of_a)
+2
+
+In [17]: word = 'banana'
+    ...: count_a = word.count('a', 1, 5)
+    ...: print(count_a)
+2
+
+In [18]: str = 'X-DSPAM-Confidence:0.8475'
+    ...:    colon_pos = str.find(':')
+    ...:    number_str = str[colon_pos + 1:].strip()
+    ...:    confidence = float(number_str)
+    ...:    print(confidence)
+  Cell In[18], line 2
+    colon_pos = str.find(':')
+    ^
+IndentationError: unexpected indent
+
+
+In [19]:
+    ...:    str = 'X-DSPAM-Confidence:0.8475'
+    ...:    colon_pos = str.find(':')
+    ...:    number_str = str[colon_pos + 1:].strip()
+    ...:    confidence = float(number_str)
+    ...:    print(confidence)
+0.8475
+
+In [20]: str.capitalize()
+Out[20]: 'X-dspam-confidence:0.8475'
+
+In [21]: str.casefold()
+Out[21]: 'x-dspam-confidence:0.8475'
+
+In [22]: string = 'good morning'
+
+In [23]: str.casefold()
+Out[23]: 'x-dspam-confidence:0.8475'
+
+In [24]: str.center()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[24], line 1
+----> 1 str.center()
+
+TypeError: center expected at least 1 argument, got 0
+
+In [25]: str.center(6)
+Out[25]: 'X-DSPAM-Confidence:0.8475'
+
+In [26]: str.center(100)
+Out[26]: '                                     X-DSPAM-Confidence:0.8475                                      '
+
+In [27]: str.endswith(ing)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[27], line 1
+----> 1 str.endswith(ing)
+
+NameError: name 'ing' is not defined
+
+In [28]: str.endswith('ing')
+Out[28]: False
+
+In [29]: string =
+  Cell In[29], line 1
+    string =
+            ^
+SyntaxError: invalid syntax
+
+
+In [30]: def(string)
+  Cell In[30], line 1
+    def(string)
+       ^
+SyntaxError: invalid syntax
+
+
+In [31]: str.find(Good)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[31], line 1
+----> 1 str.find(Good)
+
+NameError: name 'Good' is not defined
+
+In [32]: str.find('Good')
+Out[32]: -1
+
+In [33]: str.replace('good', 'bad')
+Out[33]: 'X-DSPAM-Confidence:0.8475'
+
+In [34]: string = 'good morning'
+
+In [35]: str.replace('good', 'bad')
+Out[35]: 'X-DSPAM-Confidence:0.8475'
+
+In [36]: original_str = 'X-DSPAM-Confidence:0.8475'
+    ...: modified_str = 'good morning'
+
+In [37]: str.replace('good', 'bad')
+    ...: Out[33]: 'X-DSPAM-Confidence:0.8475'
+
+In [38]: original_str = 'X-DSPAM-Confidence:0.8475'
+    ...: modified_str = original_str.replace('X-DSPAM-Confidence:0.8475', 'good morning')
+
+In [39]: str.replace('good', 'bad')
+Out[39]: 'X-DSPAM-Confidence:0.8475'
