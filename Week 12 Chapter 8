@@ -1,0 +1,252 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: def chop(lst):
+   ...:
+   ...:     if len(lst) > 1:
+   ...:         lst.pop(0)
+   ...:         lst.pop(-1)
+   ...:     return None
+   ...:
+
+In [2]: my_list = [1, 2, 3, 4, 5]
+   ...: chop(my_list)
+   ...: print(my_list)
+[2, 3, 4]
+
+In [3]: def middle(lst):
+   ...:     return lst[1:-1]
+   ...:
+
+In [4]: middle(my_list)
+Out[4]: [3]
+
+In [5]: print(my_list)
+[2, 3, 4]
+
+In [6]: fhand = open('mbox-short1.txt')
+   ...: count = 0
+   ...: for line in fhand:
+   ...:     words = line.split()
+   ...:     # print 'Debug:', words
+   ...:     if len(words) == 0 : continue
+   ...:     if words[0] != 'From' : continue
+   ...:     print(words[2])
+   ...:
+Sat
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[6], line 8
+      6 if len(words) == 0 : continue
+      7 if words[0] != 'From' : continue
+----> 8 print(words[2])
+
+IndexError: list index out of range
+
+In [7]: fhand = open('mbox-short1.txt')
+   ...: count = 0
+   ...: for line in fhand:
+   ...:     words = line.split()
+   ...:     # Skip lines that are empty
+   ...:     if len(words) == 0: continue
+   ...:     # Skip lines that don't start with 'From'
+   ...:     if words[0] != 'From': continue
+   ...:     # Ensure that there are at least 3 words to access words[2]
+   ...:     if len(words) < 3: continue
+   ...:     print(words[2])
+   ...:
+Sat
+
+In [8]: fhand = open('mbox-short.txt')
+   ...: count = 0
+   ...: for line in fhand:
+   ...:     words = line.split()
+   ...:
+   ...:     if len(words) > 0 and words[0] == 'From' and len(words) >= 3:
+   ...:         print(words[2])
+   ...:
+Sat
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Fri
+Thu
+Thu
+Thu
+Thu
+Thu
+Thu
+
+In [9]: fhand = open('mbox-short1.txt')
+   ...: count = 0
+   ...: for line in fhand:
+   ...:     words = line.split()
+   ...:
+   ...:     if len(words) > 0 and words[0] == 'From' and len(words) >= 3:
+   ...:         print(words[2])
+   ...:
+Sat
+
+In [10]: open('romeo.txt')
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+Cell In[10], line 1
+----> 1 open('romeo.txt')
+
+File ~\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:324, in _modified_open(file, *args, **kwargs)
+    317 if file in {0, 1, 2}:
+    318     raise ValueError(
+    319         f"IPython won't let you open fd={file} by default "
+    320         "as it is likely to crash IPython. If you know what you are doing, "
+    321         "you can use builtins' open."
+    322     )
+--> 324 return io_open(file, *args, **kwargs)
+
+FileNotFoundError: [Errno 2] No such file or directory: 'romeo.txt'
+
+In [11]: open('romeo.txt')
+Out[11]: <_io.TextIOWrapper name='romeo.txt' mode='r' encoding='cp1252'>
+
+In [12]: print(fhand.read('romeo.txt'))
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[12], line 1
+----> 1 print(fhand.read('romeo.txt'))
+
+TypeError: argument should be integer or None, not 'str'
+
+In [13]: read('romeo.txt')
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[13], line 1
+----> 1 read('romeo.txt')
+
+NameError: name 'read' is not defined
+
+In [14]: print('romeo.txt')
+romeo.txt
+
+In [15]: with open('romeo.txt', 'r') as fhand:
+    ...:
+    ...:     word_list = []
+    ...:
+    ...:     # Read each line in the file
+    ...:     for line in fhand:
+    ...:         # Split the line into words
+    ...:         words = line.split()
+    ...:
+    ...:         # For each word in the line, check if it's not already in the word_list
+    ...:         for word in words:
+    ...:             if word not in word_list:
+    ...:                 word_list.append(word)
+    ...:
+    ...: # Sort the word_list alphabetically
+    ...: word_list.sort()
+    ...:
+    ...: # Print the resulting list of words in alphabetical order
+    ...: print(word_list)
+['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and', 'breaks', 'east', 'envious', 'fair', 'grief', 'is', 'kill', 'light', 'moon', 'pale', 'sick', 'soft', 'sun', 'the', 'through', 'what', 'window', 'with', 'yonder']
+
+In [16]: file_name = input("Enter a file name: ")
+    ...:
+    ...: try:
+    ...:
+    ...:     with open(file_name, 'r') as fhand:
+    ...:         from_count = 0  # To count the number of "From" lines
+    ...:
+    ...:         for line in fhand:
+    ...:
+    ...:             line = line.strip()
+    ...:             if line.startswith("From "):
+    ...:                 words = line.split()
+    ...:                 print(words[1])
+    ...:                 from_count += 1
+    ...:
+    ...:
+    ...:         print(f"There were {from_count} lines in the file with From as the first word")
+    ...: except FileNotFoundError:
+    ...:     print("File not found. Please make sure the file name is correct.")
+    ...:
+Enter a file name: mbox-short.txt
+stephen.marquard@uct.ac.za
+louis@media.berkeley.edu
+zqian@umich.edu
+rjlowe@iupui.edu
+zqian@umich.edu
+rjlowe@iupui.edu
+cwen@iupui.edu
+cwen@iupui.edu
+gsilver@umich.edu
+gsilver@umich.edu
+zqian@umich.edu
+gsilver@umich.edu
+wagnermr@iupui.edu
+zqian@umich.edu
+antranig@caret.cam.ac.uk
+gopal.ramasammycook@gmail.com
+david.horwitz@uct.ac.za
+david.horwitz@uct.ac.za
+david.horwitz@uct.ac.za
+david.horwitz@uct.ac.za
+stephen.marquard@uct.ac.za
+louis@media.berkeley.edu
+louis@media.berkeley.edu
+ray@media.berkeley.edu
+cwen@iupui.edu
+cwen@iupui.edu
+cwen@iupui.edu
+There were 27 lines in the file with From as the first word
+
+In [17]: numbers = []
+    ...:
+    ...:
+    ...: while True:
+    ...:     user_input = input("Enter a number (or 'done' to finish): ")
+    ...:
+    ...:     if user_input.lower() == 'done':
+    ...:         break
+    ...:
+    ...:     try:
+    ...:
+    ...:         number = float(user_input)
+    ...:         numbers.append(number)
+    ...:     except ValueError:
+    ...:
+    ...:         print("Invalid input. Please enter a number or 'done'.")
+    ...:
+    ...:
+    ...: if numbers:
+    ...:
+    ...:     print("Maximum number:", max(numbers))
+    ...:     print("Minimum number:", min(numbers))
+    ...: else:
+    ...:     print("No numbers were entered.")
+    ...:
+Enter a number (or 'done' to finish): 5
+Enter a number (or 'done' to finish): 5
+Enter a number (or 'done' to finish): 7
+Enter a number (or 'done' to finish): 2
+Enter a number (or 'done' to finish): 9
+Enter a number (or 'done' to finish): 10
+Enter a number (or 'done' to finish): done
+Maximum number: 10.0
+Minimum number: 2.0
