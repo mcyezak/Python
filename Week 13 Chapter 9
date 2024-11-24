@@ -1,0 +1,200 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: open('words.txt')
+Out[1]: <_io.TextIOWrapper name='words.txt' mode='r' encoding='cp1252'>
+
+In [2]: %cat words.txt
+UsageError: Line magic function `%cat` not found.
+
+In [3]: with open('words.txt', 'r') as file:
+   ...:     content = file.read()  # Read the entire file
+   ...:     print(content)         # Display the content
+   ...:
+apple
+banana
+cherry
+dog
+elephant
+frog
+giraffe
+house
+igloo
+jungle
+kite
+lemon
+mountain
+notebook
+orange
+pencil
+queen
+river
+snake
+table
+umbrella
+violin
+whale
+xylophone
+yellow
+zebra
+
+
+In [4]: with open('words.txt', 'r') as file:
+   ...:     words = file.read().splitlines()
+   ...:
+   ...:
+   ...: words_dict = {word: None for word in words}
+   ...:
+   ...:
+   ...: word_to_check = "example"
+   ...: if word_to_check in words_dict:
+   ...:     print(f"'{word_to_check}' is in the dictionary.")
+   ...: else:
+   ...:     print(f"'{word_to_check}' is not in the dictionary.")
+   ...:
+'example' is not in the dictionary.
+
+In [5]: with open('words.txt', 'r') as file:
+   ...:     words = file.read().splitlines()
+   ...:
+   ...:
+   ...: words_dict = {word: None for word in words}
+   ...:
+   ...:
+   ...: word_to_check = "zebra"
+   ...: if word_to_check in words_dict:
+   ...:     print(f"'{word_to_check}' is in the dictionary.")
+   ...: else:
+   ...:     print(f"'{word_to_check}' is not in the dictionary.")
+   ...:
+'zebra' is in the dictionary.
+
+In [6]: with open('words.txt', 'r') as file:
+   ...:     words = file.read().splitlines()
+   ...:
+   ...: # Create a dictionary with the words as keys
+   ...: words_dict = {word: None for word in words}
+   ...:
+   ...: # Ask the user for input
+   ...: word_to_check = input("Enter a word to check: ").strip()
+   ...:
+   ...: # Check if the input word is in the dictionary
+   ...: if word_to_check in words_dict:
+   ...:     print(f"'{word_to_check}' is in the dictionary.")
+   ...: else:
+   ...:     print(f"'{word_to_check}' is not in the dictionary.")
+   ...:
+Enter a word to check: banana
+'banana' is in the dictionary.
+
+In [7]: file_name = input("Enter a file name: ")
+   ...:
+   ...: try:
+   ...:
+   ...:     with open(file_name, 'r') as file:
+   ...:         day_counts = {}
+   ...:
+   ...:         for line in file:
+   ...:
+   ...:             if line.startswith("From "):
+   ...:
+   ...:                 words = line.split()
+   ...:                 day = words[2]
+   ...:                 day_counts[day] = day_counts.get(day, 0) + 1
+   ...:
+   ...:     print(day_counts)
+   ...:
+   ...: except FileNotFoundError:
+   ...:     print(f"The file '{file_name}' does not exist.")
+   ...:
+Enter a file name: mbox-short.txt
+{'Sat': 1, 'Fri': 20, 'Thu': 6}
+
+In [8]: file_name = input("Enter file name: ")
+   ...:
+   ...: try:
+   ...:     with open(file_name, 'r') as file:
+   ...:         email_counts = {}
+   ...:         for line in file:
+   ...:             if line.startswith("From "):
+   ...:                 words = line.split()
+   ...:                 email = words[1]
+   ...:                 email_counts[email] = email_counts.get(email, 0) + 1
+   ...:         print(email_counts)
+   ...: except FileNotFoundError:
+   ...:     print(f"The file '{file_name}' does not exist. Please check the file name and try again.")
+   ...:
+Enter file name: mbox-short.txt
+{'stephen.marquard@uct.ac.za': 2, 'louis@media.berkeley.edu': 3, 'zqian@umich.edu': 4, 'rjlowe@iupui.edu': 2, 'cwen@iupui.edu': 5, 'gsilver@umich.edu': 3, 'wagnermr@iupui.edu': 1, 'antranig@caret.cam.ac.uk': 1, 'gopal.ramasammycook@gmail.com': 1, 'david.horwitz@uct.ac.za': 4, 'ray@media.berkeley.edu': 1}
+
+In [9]: file_name = input("Enter file name: ")
+   ...:
+   ...: try:
+   ...:     with open(file_name, 'r') as file:
+   ...:         email_counts = {}
+   ...:         for line in file:
+   ...:             if line.startswith("From "):
+   ...:                 words = line.split()
+   ...:                 email = words[1]
+   ...:                 email_counts[email] = email_counts.get(email, 0) + 1
+   ...:
+   ...:         max_email = None
+   ...:         max_count = 0
+   ...:         for email, count in email_counts.items():
+   ...:             if count > max_count:
+   ...:                 max_email = email
+   ...:                 max_count = count
+   ...:
+   ...:     print(max_email, max_count)
+   ...: except FileNotFoundError:
+   ...:     print(f"The file '{file_name}' does not exist.")
+   ...:
+Enter file name: mbox-short.txt
+cwen@iupui.edu 5
+
+In [10]:  file_name = input("Enter file name: ")
+    ...:    ...:
+    ...:    ...: try:
+    ...:    ...:     with open(file_name, 'r') as file:
+    ...:    ...:         email_counts = {}
+    ...:    ...:         for line in file:
+    ...:    ...:             if line.startswith("From "):
+    ...:    ...:                 words = line.split()
+    ...:    ...:                 email = words[1]
+    ...:    ...:                 email_counts[email] = email_counts.get(email, 0) + 1
+    ...:    ...:
+    ...:    ...:         max_email = None
+    ...:    ...:         max_count = 0
+    ...:    ...:         for email, count in email_counts.items():
+    ...:    ...:             if count > max_count:
+    ...:    ...:                 max_email = email
+    ...:    ...:                 max_count = count
+    ...:    ...:
+    ...:    ...:     print(max_email, max_count)
+    ...:    ...: except FileNotFoundError:
+    ...:    ...:     print(f"The file '{file_name}' does not exist.")
+    ...:
+Enter file name: mbox.txt
+The file 'mbox.txt' does not exist.
+
+In [11]: file_name = input("Enter file name: ")
+    ...:
+    ...: try:
+    ...:     with open(file_name, 'r') as file:
+    ...:         domain_counts = {}
+    ...:         for line in file:
+    ...:             if line.startswith("From "):
+    ...:                 words = line.split()
+    ...:                 email = words[1]
+    ...:                 domain = email.split('@')[1]
+    ...:                 domain_counts[domain] = domain_counts.get(domain, 0) + 1
+    ...:
+    ...:         print(domain_counts)
+    ...: except FileNotFoundError:
+    ...:     print(f"The file '{file_name}' does not exist. Please check the file name and try again.")
+    ...:
+Enter file name: mbox-short.txt
+{'uct.ac.za': 6, 'media.berkeley.edu': 4, 'umich.edu': 7, 'iupui.edu': 8, 'caret.cam.ac.uk': 1, 'gmail.com': 1}
