@@ -1,0 +1,111 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]:
+
+In [1]: file_name = input("Enter file name: ")
+   ...:
+   ...: try:
+   ...:     with open(file_name, 'r') as file:
+   ...:         email_counts = {}
+   ...:         for line in file:
+   ...:             if line.startswith("From "):
+   ...:                 words = line.split()
+   ...:                 email = words[1]
+   ...:                 email_counts[email] = email_counts.get(email, 0) + 1
+   ...:
+   ...:         email_list = [(count, email) for email, count in email_counts.items()]
+   ...:         email_list.sort(reverse=True)
+   ...:
+   ...:         most_commits = email_list[0]
+   ...:         print(most_commits[1], most_commits[0])
+   ...:
+   ...: except FileNotFoundError:
+   ...:     print(f"The file '{file_name}' does not exist.")
+   ...:
+Enter file name: mbox-short.txt
+cwen@iupui.edu 5
+
+In [2]: file_name = input("Enter file name: ")
+   ...:
+   ...: try:
+   ...:     with open(file_name, 'r') as file:
+   ...:         hour_counts = {}
+   ...:         for line in file:
+   ...:             if line.startswith("From "):
+   ...:                 words = line.split()
+   ...:                 time_str = words[5]
+   ...:                 hour = time_str.split(':')[0]
+   ...:                 hour_counts[hour] = hour_counts.get(hour, 0) + 1
+   ...:
+   ...:         for hour in sorted(hour_counts):
+   ...:             print(hour, hour_counts[hour])
+   ...:
+   ...: except FileNotFoundError:
+   ...:     print(f"The file '{file_name}' does not exist. Please check the file name and try again.")
+   ...:
+Enter file name: mbox-short.txt
+04 3
+06 1
+07 1
+09 2
+10 3
+11 6
+14 1
+15 2
+16 4
+17 2
+18 1
+19 1
+
+In [3]: import string
+   ...:
+   ...: file_name = input("Enter file name: ")
+   ...:
+   ...: try:
+   ...:     with open(file_name, 'r') as file:
+   ...:         letter_counts = {}
+   ...:         for line in file:
+   ...:             line = line.lower()
+   ...:             for char in line:
+   ...:                 if char in string.ascii_lowercase:
+   ...:                     letter_counts[char] = letter_counts.get(char, 0) + 1
+   ...:
+   ...:         sorted_letters = sorted(letter_counts.items(), key=lambda x: x[1], reverse=True)
+   ...:
+   ...:         for letter, count in sorted_letters:
+   ...:             print(f"{letter} {count}")
+   ...:
+   ...: except FileNotFoundError:
+   ...:     print(f"The file '{file_name}' does not exist.")
+   ...:
+Enter file name: mbox-short.txt
+e 5436
+a 5223
+i 4494
+o 4174
+r 4064
+t 4050
+s 3738
+u 3123
+c 3088
+n 2575
+p 2497
+m 2436
+d 2004
+l 1832
+h 1392
+f 1257
+k 1167
+b 1134
+g 1027
+v 997
+j 959
+y 643
+w 586
+x 482
+z 78
+q 57
