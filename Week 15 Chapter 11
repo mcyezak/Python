@@ -1,0 +1,313 @@
+
+(base) C:\Users\kimbe>ipython
+Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.25.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]:
+
+In [1]: # Search for lines that contain 'From'
+   ...: import re
+   ...: hand = open('mbox-short.txt')
+   ...: for line in hand:
+   ...:     line = line.rstrip()
+   ...:     if re.search('From:', line):
+   ...:         print(line)
+   ...:
+   ...: # Code: http://www.py4e.com/code3/re01.py
+   ...: # Or select Download from this trinket's left-hand menu
+   ...:
+From: stephen.marquard@uct.ac.za
+From: louis@media.berkeley.edu
+From: zqian@umich.edu
+From: rjlowe@iupui.edu
+From: zqian@umich.edu
+From: rjlowe@iupui.edu
+From: cwen@iupui.edu
+From: cwen@iupui.edu
+From: gsilver@umich.edu
+From: gsilver@umich.edu
+From: zqian@umich.edu
+From: gsilver@umich.edu
+From: wagnermr@iupui.edu
+From: zqian@umich.edu
+From: antranig@caret.cam.ac.uk
+From: gopal.ramasammycook@gmail.com
+From: david.horwitz@uct.ac.za
+From: david.horwitz@uct.ac.za
+From: david.horwitz@uct.ac.za
+From: david.horwitz@uct.ac.za
+From: stephen.marquard@uct.ac.za
+From: louis@media.berkeley.edu
+From: louis@media.berkeley.edu
+From: ray@media.berkeley.edu
+From: cwen@iupui.edu
+From: cwen@iupui.edu
+From: cwen@iupui.edu
+
+In [2]: # Search for lines that start with 'From'
+   ...: import re
+   ...: hand = open('mbox-short.txt')
+   ...: for line in hand:
+   ...:     line = line.rstrip()
+   ...:     if re.search('^From:', line):
+   ...:         print(line)
+   ...:
+From: stephen.marquard@uct.ac.za
+From: louis@media.berkeley.edu
+From: zqian@umich.edu
+From: rjlowe@iupui.edu
+From: zqian@umich.edu
+From: rjlowe@iupui.edu
+From: cwen@iupui.edu
+From: cwen@iupui.edu
+From: gsilver@umich.edu
+From: gsilver@umich.edu
+From: zqian@umich.edu
+From: gsilver@umich.edu
+From: wagnermr@iupui.edu
+From: zqian@umich.edu
+From: antranig@caret.cam.ac.uk
+From: gopal.ramasammycook@gmail.com
+From: david.horwitz@uct.ac.za
+From: david.horwitz@uct.ac.za
+From: david.horwitz@uct.ac.za
+From: david.horwitz@uct.ac.za
+From: stephen.marquard@uct.ac.za
+From: louis@media.berkeley.edu
+From: louis@media.berkeley.edu
+From: ray@media.berkeley.edu
+From: cwen@iupui.edu
+From: cwen@iupui.edu
+From: cwen@iupui.edu
+
+In [3]: file_name = input("Enter file name: ")
+   ...:
+   ...: try:
+   ...:     with open(file_name, 'r') as file:
+   ...:         hour_counts = {}
+   ...:         for line in file:
+   ...:             if line.startswith("From "):
+   ...:                 words = line.split()
+   ...:                 time_str = words[5]
+   ...:                 hour = time_str.split(':')[0]
+   ...:                 hour_counts[hour] = hour_counts.get(hour, 0) + 1
+   ...:
+   ...:         for hour in sorted(hour_counts):
+   ...:             print(hour, hour_counts[hour])
+   ...:
+   ...:
+   ...:
+   ...: except FileNotFoundError:
+   ...:
+   ...:
+   ...:
+   ...:
+   ...:     print(f"The file '{file_name}' does not exist. Please check the file name and try again.")
+   ...:
+Enter file name:
+The file '' does not exist. Please check the file name and try again.
+
+In [4]: import re
+   ...: s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
+   ...: lst = re.findall('\S+@\S+', s)
+   ...: print(lst)
+<>:3: SyntaxWarning: invalid escape sequence '\S'
+<ipython-input-4-3894137c18b3>:3: SyntaxWarning: invalid escape sequence '\S'
+  lst = re.findall('\S+@\S+', s)
+['csev@umich.edu', 'cwen@iupui.edu']
+
+In [5]: import re
+   ...: s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
+   ...: lst = re.findall('\S+@\S+', s)
+   ...: print(lst)
+<>:3: SyntaxWarning: invalid escape sequence '\S'
+<ipython-input-5-3894137c18b3>:3: SyntaxWarning: invalid escape sequence '\S'
+  lst = re.findall('\S+@\S+', s)
+['csev@umich.edu', 'cwen@iupui.edu']
+
+In [6]: import re
+   ...:
+   ...: # Prompt the user to enter a regular expression
+   ...: regex = input("Enter a regular expression: ")
+   ...:
+   ...: # Specify the file to search through (e.g., 'mbox.txt')
+   ...: filename = 'mbox.txt'
+   ...:
+   ...: try:
+   ...:     # Initialize a counter for matched lines
+   ...:     match_count = 0
+   ...:
+   ...:     # Open the file and search for matches
+   ...:     with open(filename, 'r') as file:
+   ...:         for line in file:
+   ...:             # Strip trailing whitespace
+   ...:             line = line.rstrip()
+   ...:             # Check if the line matches the regular expression
+   ...:             if re.search(regex, line):
+   ...:                 match_count += 1
+   ...:
+   ...:     # Display the result
+   ...:     print(f"{filename} had {match_count} lines that matched {regex}")
+   ...:
+   ...: except FileNotFoundError:
+   ...:     print(f"Error: The file '{filename}' was not found.")
+   ...: except re.error:
+   ...:     print("Error: Invalid regular expression.")
+   ...:
+Enter a regular expression: ^Author
+Error: The file 'mbox.txt' was not found.
+
+In [7]: import re
+   ...:
+   ...: regex = input("Enter a regular expression: ")
+   ...:
+   ...: filename = input("Enter the file name: ")
+   ...:
+   ...: try:
+   ...:     match_count = 0
+   ...:
+   ...:     with open(filename, 'r') as file:
+   ...:         for line in file:
+   ...:             line = line.rstrip()
+   ...:             if re.search(regex, line):
+   ...:                 match_count += 1
+   ...:
+   ...:     print(f"{filename} had {match_count} lines that matched {re
+   ...:
+   ...:     a
+  Cell In[7], line 16
+    print(f"{filename} had {match_count} lines that matched {re
+                                                            ^
+SyntaxError: '{' was never closed
+
+
+In [8]: import re
+   ...:
+   ...: regex = input("Enter a regular expression: ")
+   ...:
+   ...: filename = input("Enter the file name: ")
+   ...:
+   ...: try:
+   ...:     match_count = 0
+   ...:
+   ...:     with open(filename, 'r') as file:
+   ...:         for line in file:
+   ...:             line = line.rstrip()
+   ...:             if re.search(regex, line):
+   ...:                 match_count += 1
+   ...:
+   ...:     print(f"{filename} had {match_count} lines that matched {regex}")
+   ...:
+   ...:
+   ...:
+   ...:
+   ...:     k
+   ...:
+   ...:     jhgfdsa
+   ...:
+  Cell In[8], line 24
+
+    ^
+SyntaxError: incomplete input
+
+
+In [9]:
+
+In [9]: import re
+   ...:
+   ...: # Prompt the user to enter a regular expression
+   ...: regex = input("Enter a regular expression: ")
+   ...:
+   ...: # Ask the user to specify the file name
+   ...: filename = input("Enter the file name: ")
+   ...:
+   ...: try:
+   ...:     # Initialize a counter for matched lines
+   ...:     match_count = 0
+   ...:
+   ...:     # Open the file and search for matches
+   ...:     with open(filename, 'r') as file:
+   ...:         for line in file:
+   ...:             # Strip trailing whitespace
+   ...:             line = line.rstrip()
+   ...:             # Check if the line matches the regular expression
+   ...:             if re.search(regex, line):
+   ...:                 match_count += 1
+   ...:
+   ...:     # Display the result
+   ...:     print(f"{filename} had {match_count} lines that matched {regex}")
+   ...:
+   ...: except FileNotFoundError:
+   ...:     print(f"Error: The file '{filename}' was not found.")
+   ...: except re.error:
+   ...:     print("Error: Invalid regular expression.")
+   ...:
+Enter a regular expression: ^Author
+Enter the file name: mbox-short.txt
+mbox-short.txt had 27 lines that matched ^Author
+
+    ...: # Prompt the user to enter a regular expression
+    ...: regex = input("Enter a regular expression: ")
+    ...:
+    ...: # Ask the user to specify the file name
+    ...: filename = input("Enter the file name: ")
+    ...:
+    ...: try:
+    ...:     # Initialize a counter for matched lines
+    ...:     match_count = 0
+    ...:
+    ...:     # Open the file and search for matches
+    ...:     with open(filename, 'r') as file:
+    ...:         for line in file:
+    ...:             # Strip trailing whitespace
+    ...:
+    ...:
+    ...:
+    ...:             line = line.rstrip()
+    ...:             # Check if the line matches the regular expression
+    ...:             if re.search(regex, line):
+    ...:                 match_count += 1
+    ...:
+    ...:     # Display the result
+    ...:     print(f"{filename} had {match_count} lines that matched {regex}")
+    ...:
+    ...: except FileNotFoundError:
+    ...:     print(f"Error: The file '{filename}' was not found.")
+    ...: except re.error:
+    ...:     print("Error: Invalid regular expression.")
+    ...:
+Enter a regular expression:
+Enter the file name:
+Error: The file '' was not found.
+
+In [11]: import re
+    ...:
+    ...: # Prompt the user to enter the file name
+    ...: filename = input("Enter file: ")
+    ...:
+    ...: try:
+    ...:
+    ...:     with open(filename, 'r') as file:
+    ...:
+    ...:         revisions = []
+    ...:         for line in file:
+    ...:             line = line.rstrip()
+    ...:
+    ...:             match = re.findall(r'New Revision: (\d+)', line)
+    ...:             if match:
+    ...:
+    ...:                 revisions.extend(map(int, match))
+    ...:     if revisions:
+    ...:         average = sum(revisions) / len(revisions)
+    ...:         print(f"{filename} average revision: {average}")
+    ...:     else:
+    ...:         print(f"No matching lines found in {filename}.")
+    ...:
+    ...: except FileNotFoundError:
+    ...:     print(f"Error: The file '{filename}' was not found.")
+    ...: except Exception as e:
+    ...:     print(f"An unexpected error occurred: {e}")
+    ...:
+Enter file: mbox-short.txt
+mbox-short.txt average revision: 39756.925925925
